@@ -148,6 +148,11 @@ a,
      transition: all .3s ease-in-out;
 }
 
+.logo img {
+  width: 60px;
+  height: auto; /* รักษาอัตราส่วน */
+}
+
 img {
      max-width: 100%;
      height: auto;

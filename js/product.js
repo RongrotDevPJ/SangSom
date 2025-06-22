@@ -1,17 +1,15 @@
 const products = [
     {
         id: 1,
-        title: "NIKE Air Jordan Lotus",
+        title: "NIKE Air Jordan High",
         price: "$100",
         description: "From tesco lotus.",
         colors: [
             {
-                name: "Panda",
+                name: "Black toe",
                 mainImage: "",
                 thumbnails: [
                     "",
-                    "",
-                    ""
                 ],
                 sizes: ["8US", "8.5US", "9US", "9.5US", "10US"]
             },

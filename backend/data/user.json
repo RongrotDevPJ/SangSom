@@ -1,16 +1,9 @@
 [
   {
     "userAt": "2025-06-15T07:20:35.697Z",
-    "fname": "Anud",
-    "lname": "Chur",
+    "fname": "Rong",
+    "lname": "Rot",
     "email": "admin@mail.org",
     "password": "11111111"
-  },
-  {
-    "userAt": "2025-06-15T13:03:09.759Z",
-    "fname": "Aut",
-    "lname": "Craft",
-    "email": "admin123@mail.org",
-    "password": "22222222"
   }
 ]
