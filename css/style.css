@@ -39,6 +39,7 @@ body {
      line-height: 1.80857;
      font-weight: normal;
      overflow-x: hidden;
+     background-color: #EDE8F5;
 }
 
 a {
@@ -214,18 +215,17 @@ button {
 .header_section{
 	width: 100%;
 	float: left;
-	background-image: url(../images/banner.png);
 	height: auto;
 	padding: 20px 0px;
 	background-size: 100%;
 	background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.6); /* โปร่งใส */
+    background-color: #7091E6; /* โปร่งใส */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* เพิ่มเงาด้านล่าง */
 }
 
 .padding_0{ width: 100%; float: left; }
 
-.mens_taital{ width: 100%; float: left; color: #908d92; font-size: 14pt; }
+.mens_taital{ width: 100%; float: left; color: rgb(0, 0, 0); font-size: 14pt; }
 .mens_taital_2 {
     width: 100%;
     float: left;
@@ -237,7 +237,7 @@ button {
     width: 28%;
     /* margin: 0 auto; */
     text-align: center;
-    color: #ffffff;
+    color: #141619;
     border: 2px solid #8d8791;
     border-radius: 30px;
     margin-top: 150px;
@@ -272,7 +272,7 @@ button {
 	width: 100%;
 	float: left;
 	font-size: 30pt;
-	color: #db5660;
+	color: #FE0000;
 }
 
 .mens_text{
