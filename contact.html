@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Shoes</title>
+      <title>Sangsom</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -36,32 +36,43 @@
    <body class="main-layout">
 	<!-- header section start -->
 	<div class="header_section header_main">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-3">
-					<div class="logo"><a href="#"><img src="images/logo.png"></a></div>
-				</div>
-				<div class="col-sm-9">
-					<nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                           <a class="nav-item nav-link" href="index.html">Home</a>
-                           <a class="nav-item nav-link" href="collection.html">Collection</a>
-                           <a class="nav-item nav-link" href="shoes.html">Shoes</a>
-                           <a class="nav-item nav-link" href="racing boots.html">Racing Boots</a>
-                           <a class="nav-item nav-link" href="contact.html">Contact</a>
-                           <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png"></a>
-                           <a class="nav-item nav-link last" href="contact.html"><img src="images/shop_icon.png"></a>
-                        </div>
-                    </div>
-                    </nav>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-sm-3">
+        <div class="logo">
+          <a href="#"><img src="images/logo.png" alt="Logo" /></a>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="index.html">Home</a>
+              <a class="nav-item nav-link" href="collection.html">Collection</a>
+              <a class="nav-item nav-link" href="shoes.html">Shoes</a>
+              <a class="nav-item nav-link" href="racing boots.html">Racing Boots</a>
+              <a class="nav-item nav-link" href="contact.html">Contact</a>
+              <a class="nav-item nav-link" href="login.html">Login</a>
+              <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png" alt="Search" /></a>
+              <a class="nav-item nav-link last" href="cart.html"><img src="images/shop_icon.png" alt="Cart" /></a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
    	<!-- contact section start -->
     <div class="collection_text">Contact Us</div>
     <div class="layout_padding contact_section">
@@ -79,20 +90,22 @@
                               <input type="text" class="email-bt" placeholder="Name" name="Name">
                             </div>
                             <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Phone Numbar" name="Name">
+                              <input type="text" class="email-bt" placeholder="Phone Number" name="Phone">
                             </div>
                             <div class="form-group">
                               <input type="text" class="email-bt" placeholder="Email" name="Email">
                             </div>
                             
                             <div class="form-group">
-                                <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                                <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Message"></textarea>
                             </div>
+
+                            <div class="send_btn">
+                        <button class="main_bt">Send</button>
+                       </div>   
                           </form>   
                        </div> 
-                       <div class="send_btn">
-                        <button class="main_bt">Send</button>
-                       </div>                   
+                                       
                     </div>
     		</div>
     			</div>
@@ -187,45 +200,47 @@
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
+      <!--<script src="js/jquery-3.0.0.min.js"></script>-->
       <script src="js/plugin.js"></script>
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <!-- javascript --> 
       <script src="js/owl.carousel.js"></script>
-      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
       <script>
-         $(document).ready(function(){
-         $(".fancybox").fancybox({
-         openEffect: "none",
-         closeEffect: "none"
-         });
-         
-         
-$('#myCarousel').carousel({
-            interval: false
+  $(document).ready(function () {
+    // Fancybox
+    $(".fancybox").fancybox({
+      openEffect: "none",
+      closeEffect: "none"
+    });
+
+    // Bootstrap Carousel (Ensure element exists)
+    if ($("#myCarousel").length) {
+      $('#myCarousel').carousel({
+        interval: false
+      });
+
+      // Scroll slides on swipe for touch devices
+      $("#myCarousel").on("touchstart", function (event) {
+        var yClick = event.originalEvent.touches[0].pageY;
+        $(this).one("touchmove", function (event) {
+          var yMove = event.originalEvent.touches[0].pageY;
+          if (Math.floor(yClick - yMove) > 1) {
+            $(this).carousel('next');
+          } else if (Math.floor(yClick - yMove) < -1) {
+            $(this).carousel('prev');
+          }
         });
-
-        //scroll slides on swipe for touch enabled devices
-
-        $("#myCarousel").on("touchstart", function(event){
-
-            var yClick = event.originalEvent.touches[0].pageY;
-            $(this).one("touchmove", function(event){
-
-                var yMove = event.originalEvent.touches[0].pageY;
-                if( Math.floor(yClick - yMove) > 1 ){
-                    $(".carousel").carousel('next');
-                }
-                else if( Math.floor(yClick - yMove) < -1 ){
-                    $(".carousel").carousel('prev');
-                }
-            });
-            $(".carousel").on("touchend", function(){
-                $(this).off("touchmove");
-            });
+        $(".carousel").on("touchend", function () {
+          $(this).off("touchmove");
         });
-      </script> 
+      });
+    }
+  });
+</script>
    </body>
 </html>

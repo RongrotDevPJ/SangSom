@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Pullshoes</title>
+      <title>Sangsom</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -51,10 +51,13 @@
                            <a class="nav-item nav-link" href="index.html">Home</a>
                            <a class="nav-item nav-link" href="collection.html">Collection</a>
                            <a class="nav-item nav-link" href="shoes.html">Shoes</a>
-                           <a class="nav-item nav-link" href="racing boots.html">Racing Boots</a>
+                           <a class="nav-item nav-link" href="racing boots.html">Racing</a>
                            <a class="nav-item nav-link" href="contact.html">Contact</a>
+             			   <a class="nav-item nav-link" href="login.html">Login</a>
+
+						   
                            <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png"></a>
-                           <a class="nav-item nav-link last" href="contact.html"><img src="images/shop_icon.png"></a>
+                           <a class="nav-item nav-link last" href="cart.html"><img src="images/shop_icon.png"></a>
                         </div>
                     </div>
                     </nav>
@@ -508,36 +511,36 @@
       <script src="js/owl.carousel.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
       <script>
-         $(document).ready(function(){
-         $(".fancybox").fancybox({
-         openEffect: "none",
-         closeEffect: "none"
-         });
-         
-         
-$('#myCarousel').carousel({
-            interval: false
+  $(document).ready(function () {
+    // Fancybox
+    $(".fancybox").fancybox({
+      openEffect: "none",
+      closeEffect: "none"
+    });
+
+    // Bootstrap Carousel (Ensure element exists)
+    if ($("#myCarousel").length) {
+      $('#myCarousel').carousel({
+        interval: false
+      });
+
+      // Scroll slides on swipe for touch devices
+      $("#myCarousel").on("touchstart", function (event) {
+        var yClick = event.originalEvent.touches[0].pageY;
+        $(this).one("touchmove", function (event) {
+          var yMove = event.originalEvent.touches[0].pageY;
+          if (Math.floor(yClick - yMove) > 1) {
+            $(this).carousel('next');
+          } else if (Math.floor(yClick - yMove) < -1) {
+            $(this).carousel('prev');
+          }
         });
-
-        //scroll slides on swipe for touch enabled devices
-
-        $("#myCarousel").on("touchstart", function(event){
-
-            var yClick = event.originalEvent.touches[0].pageY;
-            $(this).one("touchmove", function(event){
-
-                var yMove = event.originalEvent.touches[0].pageY;
-                if( Math.floor(yClick - yMove) > 1 ){
-                    $(".carousel").carousel('next');
-                }
-                else if( Math.floor(yClick - yMove) < -1 ){
-                    $(".carousel").carousel('prev');
-                }
-            });
-            $(".carousel").on("touchend", function(){
-                $(this).off("touchmove");
-            });
+        $(".carousel").on("touchend", function () {
+          $(this).off("touchmove");
         });
-      </script> 
+      });
+    }
+  });
+</script>
    </body>
-</html>
+</html> 
