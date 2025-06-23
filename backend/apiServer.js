@@ -1,8 +1,11 @@
+// apiServer.js
+
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const multer = require('multer'); // Import multer
 const path = require('path'); // Import path for resolving upload directory
+const fs = require('fs'); // <--- เพิ่มบรรทัดนี้เข้ามา
 
 const app = express();
 const PORT = 5000;

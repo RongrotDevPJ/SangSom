@@ -1,96 +1,99 @@
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require('bcryptjs'); // ตรวจสอบให้แน่ใจว่าได้ require 'bcryptjs' แล้ว
 
-function login(req, res) {
-    const { email, password } = req.body;
-    const user = {
-        userAt: new Date(), email, password
+const usersFilePath = path.join(__dirname, "..", "data", "user.json");
+
+function readUsersFile() {
+    try {
+        if (fs.existsSync(usersFilePath)) {
+            const data = fs.readFileSync(usersFilePath, "utf-8");
+            if (data) { // เพิ่มการตรวจสอบว่ามีข้อมูลในไฟล์หรือไม่
+                return JSON.parse(data);
+            }
+        }
+        return []; // ถ้าไฟล์ไม่มี หรือว่างเปล่า ให้คืนค่าเป็น Array ว่าง
+    } catch (error) {
+        // หากไฟล์มีปัญหาแต่ไม่ว่างเปล่า เช่น JSON format ผิด
+        console.error("Error reading users file, returning empty array:", error.message);
+        return [];
     }
-
-    const filePath = path.join(__dirname, "..", "data", "user.json");
-    //step 1 - 2 : read the existing file an parse it into an arry
-    let users = [];
-    let emailDupli = false;
-    let passDupli = false;
-
-    if (fs.existsSync(filePath)) {
-        let data = fs.readFileSync(filePath, "utf-8");
-        users = JSON.parse(data);
-        for (let i = 0; i <= users.length; i++) {
-            if (users[i] && users[i].email === user.email) {
-                emailDupli = true;
-                break;
-            }
-        }
-        for (let i = 0; i <= users.length; i++) {
-            if (users[i] && users[i].password === user.password) {
-                passDupli = true;
-                break;
-            }
-        }
-        if (emailDupli == true) {
-            if (passDupli == false) {
-                console.log('Incorrected Password', { email });
-                res.status(200).json({ status: 'Incorrected Password', user })
-            } else {
-                console.log('Login successfully', { email });
-                res.status(200).json({ status: 'Login successfully', email })
-            }
-        } else {
-            console.log('Incorrected Username', { email });
-            res.status(200).json({ status: 'Incorrected Username', user })
-        }
-
-    } else {
-        console.log('Login error', { email });
-        res.status(400).json({ status: 'Login fail', user })
-    }
-
-    // console.log('Content form summited', {email});
-    // res.status(200).json({message : 'Email Received'});
 }
 
-function register(req, res) {
-    const { fname, lname, email, password } = req.body;
-    const user = {
-        userAt: new Date(), fname, lname, email, password
+function writeUsersFile(users) {
+    try {
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
+    } catch (error) {
+        console.error("Error writing users file:", error);
+    }
+}
+
+async function login(req, res) {
+    const { email, password } = req.body;
+    let users = readUsersFile();
+
+    const foundUser = users.find(u => u.email === email);
+
+    if (!foundUser) {
+        console.log('Login failed: Email not found', { email });
+        return res.status(400).json({ status: 'Email not found', email });
     }
 
-    const filePath = path.join(__dirname, "..", "data", "user.json");
-    //step 1 - 2 : read the existing file an parse it into an arry
-    let users = [];
-    let emailDupli = false;
+    try {
+        // เปรียบเทียบรหัสผ่านที่ผู้ใช้ป้อนกับรหัสผ่านที่ถูก hash ไว้
+        const isMatch = await bcrypt.compare(password, foundUser.password);
 
-    if (fs.existsSync(filePath)) {
-        let data = fs.readFileSync(filePath, "utf-8");
-        users = JSON.parse(data);
-        for (let i = 0; i <= users.length; i++) {
-            if (users[i] && users[i].email === user.email) {
-                emailDupli = true;
-                break;
-            }
-        }
-        if (emailDupli == false) {
-            //step 3 : append new data
-            users.push(user)
-            //step 4 : write array back into file
-            fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
-            console.log('Register successfully', { email });
-            res.status(200).json({ status: 'Register successfully', user })
+        if (isMatch) {
+            console.log('Login successfully', { email });
+            // ไม่ควรส่ง password กลับไปที่ client
+            return res.status(200).json({ status: 'Login successfully', user: { email: foundUser.email, fname: foundUser.fname, lname: foundUser.lname } });
         } else {
+            console.log('Incorrect Password', { email });
+            return res.status(401).json({ status: 'Incorrect Password', email });
+        }
+    } catch (error) {
+        console.error('Error during password comparison:', error);
+        return res.status(500).json({ status: 'Internal server error during login' });
+    }
+}
+
+async function register(req, res) {
+    const { fname, lname, email, password } = req.body;
+
+    try {
+        let users = readUsersFile(); // ใช้ helper function
+
+        // ตรวจสอบอีเมลซ้ำ
+        const emailExists = users.some(existingUser => existingUser.email === email);
+
+        if (emailExists) {
             console.log('This email has already been used', { email });
-            res.status(200).json({ status: 'This email has already been used', user })
+            return res.status(409).json({ status: 'This email has already been used', user: { email } });
         }
 
-    } else {
-        users.push(user)
-        fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
-        console.log('Register successfully', { email });
-        res.status(200).json({ status: 'Register successfully', user })
-    }
+        // *** นี่คือส่วนสำคัญ: Hash รหัสผ่านก่อนบันทึก ***
+        const hashedPassword = await bcrypt.hash(password, 10); // 10 คือ saltRounds แนะนำ 10-12
 
-    // console.log('Content form summited', {email});
-    // res.status(200).json({message : 'Email Received'});
+        const newUser = {
+            userAt: new Date().toISOString(),
+            fname,
+            lname,
+            email,
+            password: hashedPassword // บันทึกรหัสผ่านที่ถูก Hash แล้ว
+        };
+
+        // เพิ่มผู้ใช้ใหม่
+        users.push(newUser);
+        writeUsersFile(users); // ใช้ helper function
+
+        console.log('Register successfully', { email });
+        // ไม่ควรส่ง password (hashed หรือไม่ hashed) กลับไปที่ client
+        return res.status(201).json({ status: 'Register successfully', user: { email: newUser.email, fname: newUser.fname, lname: newUser.lname } });
+
+    } catch (error) {
+        console.error('Error during registration:', error);
+        return res.status(500).json({ status: 'An error occurred during registration', error: error.message });
+    }
 }
 
 module.exports = {

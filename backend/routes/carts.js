@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path'); // Import path for resolving upload directory
-const fs = require('fs'); // Import fs to ensure directory exists
+const path = require('path');
+const fs = require('fs');
 
 const cartService = require('../services/cartService');
 
-// กำหนด Path ไปยังไฟล์ product.json ของคุณ
+// กำหนด Path ไปยังไฟล์ cart.json ของคุณ (ยังคงมีไว้เผื่อมีการใช้งาน GET /carts โดยตรง)
 const cartsFilePath = path.join(__dirname, '..', 'data', 'cart.json');
 
-// --- Helper Functions สำหรับอ่าน/เขียนไฟล์ JSON ---
+// --- Helper Functions สำหรับอ่าน/เขียนไฟล์ JSON (ใน carts.js นี้อาจจะเหลือแค่สำหรับ GET) ---
 const readCartsFile = () => {
     try {
         const data = fs.readFileSync(cartsFilePath, 'utf8');
@@ -23,24 +23,22 @@ const readCartsFile = () => {
 
 router.get('/', (req, res) => {
     try {
-        // *** สำคัญ: อ่านไฟล์ JSON จากดิสก์ใหม่ทุกครั้งที่มี GET Request ***
+        // อ่านไฟล์ JSON จากดิสก์ใหม่ทุกครั้งที่มี GET Request
         const carts = readCartsFile();
         res.json(carts);
     } catch (e) {
-        res.status(400).json({ status: "Error Don't have file" });
+        res.status(400).json({ status: "Error Don't have file", message: e.message });
     }
-})
+});
 
 router.post('/add', (req, res) => {
-    // *** สำคัญ: อ่านไฟล์ JSON จากดิสก์ใหม่ทุกครั้งที่มี GET Request ***
-    const carts = readCartsFile();
-    const response = cartService.addCart(req, res);
-})
+    // เรียกใช้ service โดยตรง ไม่ต้องอ่านไฟล์ใน route แล้ว
+    cartService.addCart(req, res);
+});
 
 router.post('/remove', (req, res) => {
-    // *** สำคัญ: อ่านไฟล์ JSON จากดิสก์ใหม่ทุกครั้งที่มี GET Request ***
-    const carts = readCartsFile();
-    const response = cartService.removeCart(req, res);
-})
+    // เรียกใช้ service โดยตรง ไม่ต้องอ่านไฟล์ใน route แล้ว
+    cartService.removeCart(req, res);
+});
 
 module.exports = router;

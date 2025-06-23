@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <!-- Title -->
-    <title>Login / Register</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="auth.css" />
-    <link
-      rel="stylesheet"
-      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-      media="screen"
-    />
-    <link rel="icon" href="images/fevicon.png" type="image/gif" />
-  </head>
-
-  <body class="main-layout auth-page">
-    <!-- Header -->
-
-    <div class="header_section header_main">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Sangsom</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+	<!-- header section start -->
+	<div class="header_section header_main">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-sm-3">
@@ -70,192 +73,274 @@
     </div>
   </div>
 </div>
+   <body>
+      <div class="collection_text">Login & Register</div>
+      <div class="layout_padding contact_section">
+         <div class="container mt-5">
+            <div class="row justify-content-center">
+               <div class="col-md-6">
+                  <ul class="nav nav-tabs mb-4 justify-content-center" id="authTab">
+                     <li class="nav-item">
+                        <a class="nav-link active" id="login-tab" href="#" onclick="showForm('login')">Sign In</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" id="register-tab" href="#" onclick="showForm('register')">Register</a>
+                     </li>
+                  </ul>
 
-    <!-- Login/Register Section -->
-     <div class="collection_text">Login & Register</div>
-     <div class="layout_padding contact_section">
-
-    <div class="container mt-5">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <!-- Tabs -->
-          <ul class="nav nav-tabs mb-4 justify-content-center" id="authTab">
-            <li class="nav-item">
-              <a class="nav-link active" id="login-tab" href="#" onclick="showForm('login')">Sign In</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="register-tab" href="#" onclick="showForm('register')">Register</a>
-            </li>
-          </ul>
-
-          <!-- Login Form -->
-          <div class="card p-4 shadow-sm" id="loginForm">
-            <h4 class="text-center text-pink mb-4">Sign In</h4>
-            <form onsubmit="alert('Login not implemented yet'); return false;">
-              <div class="form-group">
-                <input type="text" class="form-control" name="username" placeholder="Username" required />
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" name="password" placeholder="Password" required />
-              </div>
-              <button type="submit" class="btn btn-success btn-block">LOGIN</button>
-            </form>
-          </div>
-
-          <!-- Register Form -->
-          <div class="card p-4 shadow-sm d-none" id="registerForm">
-            <h4 class="text-center text-pink mb-4">Register</h4>
-            <form onsubmit="alert('Register not implemented yet'); return false;">
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <input type="text" name="firstname" class="form-control" placeholder="First name" required />
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="text" name="lastname" class="form-control" placeholder="Last name" required />
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Email" required />
-              </div>
-              <div class="form-group">
-                <input type="password" name="password" class="form-control" placeholder="Password" required />
-              </div>
-              <div class="form-group">
-                <input type="password" name="confirm_password" class="form-control" placeholder="Confirm Password" required />
-              </div>
-              <button type="submit" class="btn btn-pink btn-block">REGISTER</button>
-            </form>
-          </div>
-        </div>
+                  <div class="card p-4 shadow-sm" id="loginForm">
+                     <h4 class="text-center text-pink mb-4">Sign In</h4>
+                     <form id="loginFormElement"> <div class="form-group">
+                           <input type="email" class="form-control" name="email" id="loginEmail" placeholder="Email" required />
+                        </div>
+                        <div class="form-group">
+                           <input type="password" class="form-control" name="password" id="loginPassword" placeholder="Password" required />
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block">LOGIN</button>
+                     </form>
+                     <div id="loginMessage" class="mt-3 text-center"></div> </div>
+                     
+                  <div class="card p-4 shadow-sm d-none" id="registerForm">
+                     <h4 class="text-center text-pink mb-4">Register</h4>
+                     <form id="registerFormElement"> <div class="form-row">
+                           <div class="form-group col-md-6">
+                              <input type="text" name="fname" id="registerFname" class="form-control" placeholder="First name" required />
+                           </div>
+                           <div class="form-group col-md-6">
+                              <input type="text" name="lname" id="registerLname" class="form-control" placeholder="Last name" required />
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <input type="email" name="email" id="registerEmail" class="form-control" placeholder="Email" required />
+                        </div>
+                        <div class="form-group">
+                           <input type="password" name="password" id="registerPassword" class="form-control" placeholder="Password" required />
+                        </div>
+                        <div class="form-group">
+                           <input type="password" name="confirm_password" id="registerConfirmPassword" class="form-control" placeholder="Confirm Password" required />
+                        </div>
+                        <button type="submit" class="btn btn-pink btn-block">REGISTER</button>
+                     </form>
+                     <div id="registerMessage" class="mt-3 text-center"></div> </div>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-</div>
-    <!-- Footer -->
-    <div class="section_footer">
-      <div class="container">
-        <div class="mail_section">
-          <div class="row">
-            <div class="col-sm-6 col-lg-2">
-              <div><a href="#"><img src="images/footer-logo.png" /></a></div>
+      <div class="section_footer">
+         <div class="container">
+            <div class="mail_section">
+               <div class="row">
+                  <div class="col-sm-6 col-lg-2">
+                     <div><a href="#"><img src="images/footer-logo.png" /></a></div>
+                  </div>
+                  <div class="col-sm-6 col-lg-2">
+                     <div class="footer-logo"><img src="images/phone-icon.png" /><span class="map_text">(71) 1234567890</span></div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                     <div class="footer-logo"><img src="images/email-icon.png" /><span class="map_text">Demo@gmail.com</span></div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                     <div class="social_icon">
+                        <ul>
+                           <li><a href="#"><img src="images/fb-icon.png" /></a></li>
+                           <li><a href="#"><img src="images/twitter-icon.png" /></a></li>
+                           <li><a href="#"><img src="images/in-icon.png" /></a></li>
+                           <li><a href="#"><img src="images/google-icon.png" /></a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-sm-2"></div>
+               </div>
             </div>
-            <div class="col-sm-6 col-lg-2">
-              <div class="footer-logo"><img src="images/phone-icon.png" /><span class="map_text">(71) 1234567890</span></div>
+            <div class="footer_section_2">
+               <div class="row">
+                  <div class="col-sm-4 col-lg-2">
+                     <p class="dummy_text"> ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur ipsum dolor sit amet,</p>
+                  </div>
+                  <div class="col-sm-4 col-lg-2">
+                     <h2 class="shop_text">Address</h2>
+                     <div class="image-icon"><img src="images/map-icon.png" /><span class="pet_text">No 40 Baria Sreet 15/2 NewYork City, NY, United States.</span></div>
+                  </div>
+                  <div class="col-sm-4 col-md-6 col-lg-3">
+                     <h2 class="shop_text">Our Company</h2>
+                     <div class="delivery_text">
+                        <ul>
+                           <li>Delivery</li>
+                           <li>Legal Notice</li>
+                           <li>About us</li>
+                           <li>Secure payment</li>
+                           <li>Contact us</li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                     <h2 class="adderess_text">Products</h2>
+                     <div class="delivery_text">
+                        <ul>
+                           <li>Prices drop</li>
+                           <li>New products</li>
+                           <li>Best sales</li>
+                           <li>Contact us</li>
+                           <li>Sitemap</li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-2">
+                     <h2 class="adderess_text">Newsletter</h2>
+                     <div class="form-group">
+                        <input type="text" class="enter_email" placeholder="Enter Your email" name="Name" />
+                     </div>
+                     <button class="subscribr_bt">Subscribe</button>
+                  </div>
+               </div>
             </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="footer-logo"><img src="images/email-icon.png" /><span class="map_text">Demo@gmail.com</span></div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="social_icon">
-                <ul>
-                  <li><a href="#"><img src="images/fb-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/twitter-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/in-icon.png" /></a></li>
-                  <li><a href="#"><img src="images/google-icon.png" /></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-2"></div>
-          </div>
-        </div>
-        <div class="footer_section_2">
-          <div class="row">
-            <div class="col-sm-4 col-lg-2">
-              <p class="dummy_text"> ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur ipsum dolor sit amet,</p>
-            </div>
-            <div class="col-sm-4 col-lg-2">
-              <h2 class="shop_text">Address</h2>
-              <div class="image-icon"><img src="images/map-icon.png" /><span class="pet_text">No 40 Baria Sreet 15/2 NewYork City, NY, United States.</span></div>
-            </div>
-            <div class="col-sm-4 col-md-6 col-lg-3">
-              <h2 class="shop_text">Our Company</h2>
-              <div class="delivery_text">
-                <ul>
-                  <li>Delivery</li>
-                  <li>Legal Notice</li>
-                  <li>About us</li>
-                  <li>Secure payment</li>
-                  <li>Contact us</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <h2 class="adderess_text">Products</h2>
-              <div class="delivery_text">
-                <ul>
-                  <li>Prices drop</li>
-                  <li>New products</li>
-                  <li>Best sales</li>
-                  <li>Contact us</li>
-                  <li>Sitemap</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-2">
-              <h2 class="adderess_text">Newsletter</h2>
-              <div class="form-group">
-                <input type="text" class="enter_email" placeholder="Enter Your email" name="Name" />
-              </div>
-              <button class="subscribr_bt">Subscribe</button>
-            </div>
-          </div>
-        </div>
+         </div>
       </div>
-    </div>
 
-    <!-- Copyright -->
-    <div class="copyright">2019 All Rights Reserved. <a href="https://html.design">Free html Templates</a></div>
+      <div class="copyright">2019 All Rights Reserved. <a href="https://html.design">Free html Templates</a></div>
 
-    <!-- JS Files -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/plugin.js"></script>
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="js/owl.carousel.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
-    <!-- Toggle Form Script -->
-    <script>
-      function showForm(form) {
-        document.getElementById("loginForm").classList.toggle("d-none", form !== "login");
-        document.getElementById("registerForm").classList.toggle("d-none", form !== "register");
+      <script>
+         function showForm(form) {
+            document.getElementById("loginForm").classList.toggle("d-none", form !== "login");
+            document.getElementById("registerForm").classList.toggle("d-none", form !== "register");
 
-        document.getElementById("login-tab").classList.toggle("active", form === "login");
-        document.getElementById("register-tab").classList.toggle("active", form === "register");
-      }
-      
-       $(document).ready(function () {
-    // Fancybox
-    $(".fancybox").fancybox({
-      openEffect: "none",
-      closeEffect: "none"
-    });
+            document.getElementById("login-tab").classList.toggle("active", form === "login");
+            document.getElementById("register-tab").classList.toggle("active", form === "register");
+         }
+         
+         $(document).ready(function () {
+             // Fancybox
+             $(".fancybox").fancybox({
+                 openEffect: "none",
+                 closeEffect: "none"
+             });
 
-    // Bootstrap Carousel (Ensure element exists)
-    if ($("#myCarousel").length) {
-      $('#myCarousel').carousel({
-        interval: false
-      });
+             // Bootstrap Carousel (Ensure element exists)
+             if ($("#myCarousel").length) {
+                 $('#myCarousel').carousel({
+                     interval: false
+                 });
 
-      // Scroll slides on swipe for touch devices
-      $("#myCarousel").on("touchstart", function (event) {
-        var yClick = event.originalEvent.touches[0].pageY;
-        $(this).one("touchmove", function (event) {
-          var yMove = event.originalEvent.touches[0].pageY;
-          if (Math.floor(yClick - yMove) > 1) {
-            $(this).carousel('next');
-          } else if (Math.floor(yClick - yMove) < -1) {
-            $(this).carousel('prev');
-          }
-        });
-        $(".carousel").on("touchend", function () {
-          $(this).off("touchmove");
-        });
-      });
-    }
-  });
-    </script>
-  </body>
+                 // Scroll slides on swipe for touch devices
+                 $("#myCarousel").on("touchstart", function (event) {
+                     var yClick = event.originalEvent.touches[0].pageY;
+                     $(this).one("touchmove", function (event) {
+                         var yMove = event.originalEvent.touches[0].pageY;
+                         if (Math.floor(yClick - yMove) > 1) {
+                             $(this).carousel('next');
+                         } else if (Math.floor(yClick - yMove) < -1) {
+                             $(this).carousel('prev');
+                         }
+                     });
+                     $(".carousel").on("touchend", function () {
+                         $(this).off("touchmove");
+                     });
+                 });
+             }
+
+             // --- New JavaScript for Login & Register functionality ---
+             const loginForm = document.getElementById('loginFormElement');
+             const registerForm = document.getElementById('registerFormElement');
+             const loginMessage = document.getElementById('loginMessage');
+             const registerMessage = document.getElementById('registerMessage');
+
+             // Login Form Submission
+             loginForm.addEventListener('submit', async (event) => {
+                 event.preventDefault(); // Prevent default form submission
+
+                 const email = document.getElementById('loginEmail').value;
+                 const password = document.getElementById('loginPassword').value;
+
+                 try {
+                     const response = await fetch('http://localhost:5000/api/users/login', { // Make sure this path is correct
+                         method: 'POST',
+                         headers: {
+                             'Content-Type': 'application/json'
+                         },
+                         body: JSON.stringify({ email, password })
+                     });
+
+                     const data = await response.json();
+                     if (data.status === 'Login successfully') {
+                         loginMessage.className = 'mt-3 text-center text-success';
+                         loginMessage.textContent = 'Login successful! Redirecting...';
+                         // Store user info (e.g., email) in localStorage or sessionStorage
+                         localStorage.setItem('userEmail', data.email);
+                         // Redirect to another page (e.g., index.html or profile page)
+                         setTimeout(() => {
+                             window.location.href = 'index.html'; // Or your dashboard page
+                         }, 1500);
+                     } else {
+                         loginMessage.className = 'mt-3 text-center text-danger';
+                         loginMessage.textContent = data.status || 'Login failed. Please try again.';
+                     }
+                 } catch (error) {
+                     console.error('Login error:', error);
+                     loginMessage.className = 'mt-3 text-center text-danger';
+                     loginMessage.textContent = 'An error occurred during login. Please try again later.';
+                 }
+             });
+
+             // Register Form Submission
+             registerForm.addEventListener('submit', async (event) => {
+                 event.preventDefault(); // Prevent default form submission
+
+                 const fname = document.getElementById('registerFname').value;
+                 const lname = document.getElementById('registerLname').value;
+                 const email = document.getElementById('registerEmail').value;
+                 const password = document.getElementById('registerPassword').value;
+                 const confirmPassword = document.getElementById('registerConfirmPassword').value;
+
+                 if (password !== confirmPassword) {
+                     registerMessage.className = 'mt-3 text-center text-danger';
+                     registerMessage.textContent = 'Passwords do not match.';
+                     return;
+                 }
+
+                 try {
+                     const response = await fetch('http://localhost:5000/api/users/register', { // Make sure this path is correct
+                         method: 'POST',
+                         headers: {
+                             'Content-Type': 'application/json'
+                         },
+                         body: JSON.stringify({ fname, lname, email, password })
+                     });
+
+                     const data = await response.json();
+                     if (data.status === 'Register successfully') {
+                         registerMessage.className = 'mt-3 text-center text-success';
+                         registerMessage.textContent = 'Registration successful! You can now log in.';
+                         // Optionally, switch to login form after successful registration
+                         setTimeout(() => {
+                             showForm('login');
+                             registerMessage.textContent = ''; // Clear message
+                             document.getElementById('registerFname').value = '';
+                             document.getElementById('registerLname').value = '';
+                             document.getElementById('registerEmail').value = '';
+                             document.getElementById('registerPassword').value = '';
+                             document.getElementById('registerConfirmPassword').value = '';
+                         }, 2000);
+                     } else {
+                         registerMessage.className = 'mt-3 text-center text-danger';
+                         registerMessage.textContent = data.status || 'Registration failed. Please try again.';
+                     }
+                 } catch (error) {
+                     console.error('Register error:', error);
+                     registerMessage.className = 'mt-3 text-center text-danger';
+                     registerMessage.textContent = 'An error occurred during registration. Please try again later.';
+                 }
+             });
+         });
+      </script>
+   </body>
 </html>

@@ -1,206 +1,139 @@
 const fs = require('fs');
 const path = require('path');
 
+const cartsFilePath = path.join(__dirname, "..", "data", "cart.json");
+const usersFilePath = path.join(__dirname, "..", "data", "user.json"); // เพิ่ม path สำหรับ user.json
+
+// Helper function to read carts data
+function readCartsFile() {
+    try {
+        const data = fs.readFileSync(cartsFilePath, "utf-8");
+        return JSON.parse(data);
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            return []; // Return empty array if file does not exist
+        }
+        throw error;
+    }
+}
+
+// Helper function to write carts data
+function writeCartsFile(carts) {
+    fs.writeFileSync(cartsFilePath, JSON.stringify(carts, null, 2));
+}
+
+// Helper function to read users data (used for validation)
+function readUsersFile() {
+    try {
+        const data = fs.readFileSync(usersFilePath, "utf-8");
+        return JSON.parse(data);
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            return [];
+        }
+        throw error;
+    }
+}
+
 function addCart(req, res) {
-    const { email, item, size } = req.body;
+    const { email, productID, name, price, size, img } = req.body; // เปลี่ยน item เป็น productID เพื่อความชัดเจน
 
-    const filePath = path.join(__dirname, "..", "data", "cart.json");
-    const filePathUser = path.join(__dirname, "..", "data", "user.json");
-    let users = [];
-    let usersfile = [];
-
-    if (fs.existsSync(filePathUser)) {
-        let dataUsers = fs.readFileSync(filePathUser, "utf-8");
-        usersfile = JSON.parse(dataUsers);
-        let userNum1 = -1;
-        for (let i = 0; i <= usersfile.length; i++) {
-            if (usersfile[i] && usersfile[i].email === email) {
-                userNum1 = i;
-                break;
-            }
-        }
-        if (userNum1 == -1) {
-            console.log('AddCart NOTHave Email', { email });
-            res.status(400).json({ status: 'AddCart NOTHave Email', email })
-        } else {
-            if (fs.existsSync(filePath)) {
-                let data = fs.readFileSync(filePath, "utf-8");
-                let userCart = JSON.parse(data);
-                let userNum2 = -1;
-
-                for (let i = 0; i < userCart.length; i++) {
-                    if (userCart[i] && userCart[i].email === email) {
-                        userNum2 = i;
-                        break;
-                    }
-                }
-                if (userNum2 == -1) {
-                    users = JSON.parse(data);
-                    const user = {
-                        "email": email, "carts": [
-                            {
-                                "item": item,
-                                "size": size,
-                                "amount": 1
-                            }
-                        ]
-                    }
-                    users.push(user);
-                    fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
-                    console.log('AddCart successfully', { email });
-                    res.status(200).json({ status: 'AddCart successfully', user })
-                } else {
-                    users = JSON.parse(data);
-                    let currentUser = users[userNum2];
-                    let itemInCart = currentUser.carts.find(cartItem => cartItem.item === item);
-                    let sizeInCart = currentUser.carts.find(cartSize => cartSize.size === size);
-                    if (itemInCart && sizeInCart) {
-                        //sizeInCart.amount++;
-                        currentUser.carts = currentUser.carts.map(cartItem => {
-                            if (cartItem.item === item && cartItem.size === size) {
-                                cartItem.amount++;
-                            }
-                            return cartItem;
-                        })
-                    } else {
-                        currentUser.carts.push(
-                            {
-                                item: item,
-                                size: size,
-                                amount: 1
-                            }
-                        )
-                    }
-                    const user = users[userNum2];
-                    fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
-                    console.log('AddCart successfully', { email });
-                    res.status(200).json({ status: 'AddCart successfully', user })
-                    // let cart=0;
-                    // for(let i=1;i<=users[userNum].length-1;i++){
-                    //     if(users[userNum].i.item === item){
-                    //         cart = i;
-                    //     }
-                    // }
-                    // if(cart ==0){
-
-                    // } else{
-                    //     users[userNum].cart.amount = users[userNum].cart.amount++;
-                    // }
-                }
-            } else {
-                const user = {
-                    "email": email, "carts": [
-                        {
-                            "item": item,
-                            "size": size,
-                            "amount": 1
-                        }
-                    ]
-                }
-                users.push(user)
-                fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
-                console.log('AddCart successfully', { email });
-                res.status(200).json({ status: 'AddCart successfully', user })
-            }
-        }
-    } else {
-        console.log('AddCart Error', { email });
-        res.status(400).json({ status: 'AddCart Error', email })
+    if (!email || !productID || !name || !price || !size || !img) {
+        return res.status(400).json({ status: 'Missing required fields' });
     }
 
-    // if (fs.existsSync(filePath)) {
-    //     let data = fs.readFileSync(filePath, "utf-8");
-    //     let userNum = -1;
-    //     for (let i = 0; i < data.length; i++) {
-    //         if (data.email = email) {
-    //             userNum = i;
-    //             break;
-    //         }
-    //     }
-    //     if (userNum == -1) {
-    //         users = JSON.parse(data);
-    //     }
-    // } else {
-    //     const user = {
-    //         email, "cart": {
-    //             "item": item,
-    //             "amount": 1
-    //         }
-    //     }
-    //     users.push(user)
-    //     fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
-    //     console.log('AddCart successfully', { email });
-    //     res.status(200).json({ status: 'AddCart successfully', user })
-    // }
-    /*const user = {
-        email, status, cart
-    }*/
+    try {
+        let users = readUsersFile();
+        const userExists = users.some(u => u.email === email);
+        if (!userExists) {
+            console.log('AddCart: Email not found', { email });
+            return res.status(400).json({ status: 'AddCart NOTHave Email', email });
+        }
+
+        let carts = readCartsFile();
+        let currentUserCart = carts.find(cart => cart.email === email);
+
+        if (!currentUserCart) {
+            currentUserCart = { email, carts: [] };
+            carts.push(currentUserCart);
+        }
+
+        const existingItem = currentUserCart.carts.find(
+            item => item.productID === productID && item.size === size
+        );
+
+        if (existingItem) {
+            existingItem.quantity = (existingItem.quantity || 1) + 1;
+            existingItem.totalPrice = parseFloat(existingItem.price) * existingItem.quantity;
+        } else {
+            currentUserCart.carts.push({
+                productID,
+                name,
+                img,
+                price: parseFloat(price),
+                size,
+                quantity: 1,
+                totalPrice: parseFloat(price)
+            });
+        }
+
+        writeCartsFile(carts);
+        console.log('addCart successfully', { email, productID, size });
+        res.status(200).json({ status: 'addCart successfully', userCart: currentUserCart });
+
+    } catch (error) {
+        console.error('addCart Error:', error);
+        res.status(500).json({ status: 'addCart Error', message: error.message });
+    }
 }
 
 function removeCart(req, res) {
-    const { email, item, size } = req.body;
+    const { email, productID, size } = req.body; // เปลี่ยน item เป็น productID เพื่อความชัดเจน
 
-    const filePath = path.join(__dirname, "..", "data", "cart.json");
-    const filePathUser = path.join(__dirname, "..", "data", "user.json");
-    let users = [];
-    let usersfile = [];
+    if (!email || !productID || !size) {
+        return res.status(400).json({ status: 'Missing required fields' });
+    }
 
-    if (fs.existsSync(filePathUser)) {
-        let dataUsers = fs.readFileSync(filePathUser, "utf-8");
-        usersfile = JSON.parse(dataUsers);
-        let userNum1 = -1;
-        for (let i = 0; i <= usersfile.length; i++) {
-            if (usersfile[i] && usersfile[i].email === email) {
-                userNum1 = i;
-                break;
-            }
+    try {
+        let carts = readCartsFile();
+        let currentUserCartIndex = carts.findIndex(cart => cart.email === email);
+
+        if (currentUserCartIndex === -1) {
+            console.log('removeCart: User cart not found', { email });
+            return res.status(400).json({ status: 'User cart not found', email });
         }
-        if (userNum1 == -1) {
-            console.log('removeCart NOTHave Email', { email });
-            res.status(400).json({ status: 'removeCart NOTHave Email', email })
+
+        let currentUserCart = carts[currentUserCartIndex];
+        const itemIndex = currentUserCart.carts.findIndex(
+            item => item.productID === productID && item.size === size
+        );
+
+        if (itemIndex === -1) {
+            console.log('removeCart: Item not found in cart', { email, productID, size });
+            return res.status(400).json({ status: 'Item not found in cart', email, productID, size });
+        }
+
+        let itemToRemove = currentUserCart.carts[itemIndex];
+
+        if (itemToRemove.quantity > 1) {
+            itemToRemove.quantity--;
+            itemToRemove.totalPrice = parseFloat(itemToRemove.price) * itemToRemove.quantity;
         } else {
-            if (fs.existsSync(filePath)) {
-                let data = fs.readFileSync(filePath, "utf-8");
-                let userCart = JSON.parse(data);
-                let userNum2 = -1;
-                for (let i = 0; i < userCart.length; i++) {
-                    if (userCart[i] && userCart[i].email === email) {
-                        userNum2 = i;
-                        break;
-                    }
-                }
-                if (userNum2 == -1) {
-                    console.log('removeCart NOTHave Email', { email });
-                    res.status(400).json({ status: 'removeCart NOTHave Email', email })
-                } else {
-                    users = JSON.parse(data);
-                    let currentUser = users[userNum2];
-                    let itemInCart = currentUser.carts.find(cartItem => cartItem.item === item);
-                    let sizeInCart = currentUser.carts.find(cartSize => cartSize.size === size);
-                    if (itemInCart && sizeInCart) {
-                        currentUser.carts = currentUser.carts.map(cartItem => {
-                            if (cartItem.item === item && cartItem.size === size) {
-                                cartItem.amount--;
-                            }
-                            return cartItem;
-                        }).filter(cartItem => cartItem.amount > 0);
-                        let user = currentUser;
-                        fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
-                        console.log('removeCart successfully', { email });
-                        res.status(200).json({ status: 'removeCart successfully', user })
-                    } else {
-                        console.log('removeCart NOTHave Item', { email });
-                        res.status(400).json({ status: 'removeCart NOTHave Item', email })
-                    }
-                }
-            } else {
-                console.log('removeCart NOTHave Email', { email });
-                res.status(400).json({ status: 'removeCart NOTHave Email', email })
-            }
+            currentUserCart.carts.splice(itemIndex, 1);
         }
-    } else {
-        console.log('removeCart Error', { email });
-        res.status(400).json({ status: 'removeCart Error', email })
+
+        // If the user's cart becomes empty, remove the entire cart object for that user
+        if (currentUserCart.carts.length === 0) {
+            carts.splice(currentUserCartIndex, 1);
+        }
+
+        writeCartsFile(carts);
+        console.log('removeCart successfully', { email, productID, size });
+        res.status(200).json({ status: 'removeCart successfully', userCart: currentUserCart });
+
+    } catch (error) {
+        console.error('removeCart Error:', error);
+        res.status(500).json({ status: 'removeCart Error', message: error.message });
     }
 }
 
