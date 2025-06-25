@@ -1,64 +1,194 @@
-[
-  {
-    "id": "shoe001",
-    "name": "Nike Air Force 1 Low",
-    "img": [
-      "/uploads/nike_af1_1.webp",
-      "/uploads/nike_af1_2.webp",
-      "/uploads/nike_af1_3.webp"
-    ],
-    "price": "3800.00",
-    "detail": "รองเท้าสนีกเกอร์คลาสสิกจาก Nike ที่ไม่เคยตกยุค เหมาะสำหรับทุกโอกาส มอบความสบายและสไตล์ที่ลงตัว",
-    "type": "Sneakers",
-    "brand": "Nike",
-    "gender": "Unisex",
-    "color": "White",
-    "sizes": [
-      { "size": "US 7 / EU 40", "onShop": true },
-      { "size": "US 8 / EU 41", "onShop": true },
-      { "size": "US 9 / EU 42", "onShop": true },
-      { "size": "US 10 / EU 43", "onShop": true }
-    ]
-  },
-  {
-    "id": "boot001",
-    "name": "Alpinestars Supertech R Vented Boots",
-    "img": [
-      "/uploads/alpinestars_sr_1.webp",
-      "/uploads/alpinestars_sr_2.webp",
-      "/uploads/alpinestars_sr_3.webp"
-    ],
-    "price": "19500.00",
-    "detail": "รองเท้าบูทมอเตอร์ไซค์ระดับพรีเมียมจาก Alpinestars ออกแบบมาเพื่อการแข่งขันโดยเฉพาะ ให้การป้องกันสูงสุดและระบายอากาศได้ดีเยี่ยม",
-    "type": "Racing Boots",
-    "brand": "Alpinestars",
-    "gender": "Male",
-    "color": "Black/White/Red",
-    "sizes": [
-      { "size": "EU 42", "onShop": true },
-      { "size": "EU 43", "onShop": true },
-      { "size": "EU 44", "onShop": true },
-      { "size": "EU 45", "onShop": true }
-    ]
-  },
-  {
-    "id": "sandal001",
-    "name": "Adidas Adilette Comfort Slides",
-    "img": [
-      "/uploads/adidas_adilette_1.webp",
-      "/uploads/adidas_adilette_2.webp"
-    ],
-    "price": "1200.00",
-    "detail": "รองเท้าแตะที่สวมใส่สบายเป็นพิเศษจาก Adidas เหมาะสำหรับการพักผ่อนหลังจากออกกำลังกายหรือใส่ในชีวิตประจำวัน",
-    "type": "Sandals",
-    "brand": "Adidas",
-    "gender": "Unisex",
-    "color": "Black",
-    "sizes": [
-      { "size": "US 6", "onShop": true },
-      { "size": "US 7", "onShop": true },
-      { "size": "US 8", "onShop": true },
-      { "size": "US 9", "onShop": true }
-    ]
-  }
-]
+{
+  "products": [
+    {
+      "name": "Nike Air Jordan 1 Mid",
+      "image_url": "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago.png",
+      "rating": 5,
+      "price": 180,
+      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+      "sizes": ["8US","8.5US","9US","9.5","10US"],
+      "colors": [
+        {
+          "color": "Chicago",
+          "images": [
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago.png",
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago Front.png"
+          ]
+        },
+        {
+          "color": "Black",
+          "images": [
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black.png",
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black Front.png"
+          ]
+        },
+        {
+          "color": "Laker",
+          "images": [
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker.png"
+          ]
+        }
+         
+      ]
+    },
+    {
+      "name": "Nike Air Jordan 1 Low",
+      "image_url": "imagesOrder/SNEAKER/Jordan L/Nike panda.png",
+      "rating": 5,
+      "price": 120,
+      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+      "sizes": ["8US","8.5US","9US","9.5","10US"],
+      "colors": [
+        {
+          "color": "Panda",
+          "images": [
+            "imagesOrder/SNEAKER/Jordan L/Nike panda.png",
+            "imagesOrder/SNEAKER/Jordan L/Nike panda Front.png"
+          ]
+        },
+        {
+          "color": "UNC",
+          "images": [
+            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC.png",
+            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC Front.png",
+            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC Behind.png"
+          ]
+        },
+        {
+          "color": "Quai",
+          "images": [
+            "imagesOrder/SNEAKER/Jordan L/Jordan L Quai.png",
+            "imagesOrder/SNEAKER/Jordan L/Jordan L Front.png"
+          ]
+        }
+         
+      ]
+    },
+    {
+      "name": "Adidas Samba OG",
+      "image_url": "imagesOrder/SNEAKER/Samba/Adidas samba.png",
+      "rating": 5,
+      "price": 105,
+      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+      "sizes": ["8US","8.5US","9US","9.5","10US"],
+      "colors": [
+        {
+          "color": "Cloud White Core Black",
+          "images": [
+            "imagesOrder/SNEAKER/Samba/Adidas samba.png",
+            "imagesOrder/SNEAKER/Samba/Adidas samba side.jpg",
+            "imagesOrder/SNEAKER/Samba/Adidas samba front.jpg"
+          ]
+        },
+        {
+          "color": "Black OG",
+          "images": [
+            "imagesOrder/SNEAKER/Samba/Samba OG.png"
+          ]
+        },
+        {
+          "color": "Red",
+          "images": [
+            "imagesOrder/SNEAKER/Samba/Samba Red.png"
+          ]
+        }
+         
+      ]
+    },
+    {
+      "name": "Adidas Gazelle",
+      "image_url": "imagesOrder/SNEAKER/Gazzelle/Gazelle Black.png",
+      "rating": 5,
+      "price": 120,
+      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+      "sizes": ["8US","8.5US","9US","9.5","10US"],
+      "colors": [
+        {
+          "color": "Black",
+          "images": [
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Black.png",
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Black Front.png",
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Black Top.png"
+          ]
+        },
+        {
+          "color": "Blue",
+          "images": [
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Blue.png",
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Blue Front.png"
+          ]
+        },
+        {
+          "color": "Red",
+          "images": [
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Red.png",
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Red Front.png",
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Red Top.png"
+          ]
+        }
+         
+      ]
+    },
+    {
+      "name": "Puma Speedcat",
+      "image_url": "imagesOrder/SNEAKER/Speedcat/Puma speedcat.png",
+      "rating": 5,
+      "price": 120,
+      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+      "sizes": ["8US","8.5US","9US","9.5","10US"],
+      "colors": [
+        {
+          "color": "Red",
+          "images": [
+            "imagesOrder/SNEAKER/Speedcat/Puma speedcat.png"
+          ]
+        },
+        {
+          "color": "Black",
+          "images": [
+            "imagesOrder/SNEAKER/Speedcat/Speed Black.png"
+          ]
+        },
+        {
+          "color": "Blue",
+          "images": [
+            "imagesOrder/SNEAKER/Speedcat/Speed Blue.png"
+          ]
+        }
+         
+      ]
+    },
+    {
+      "name": "New Balance 530",
+      "image_url": "imagesOrder/SNEAKER/NewB 530.png",
+      "rating": 5,
+      "price": 95,
+      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+      "sizes": ["8US","8.5US","9US","9.5","10US"],
+      "colors": [
+        {
+          "color": "Classic",
+          "images": [
+            "imagesOrder/SNEAKER/NewB 530.png"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "New Balance 574",
+      "image_url": "imagesOrder/SNEAKER/NewB 574.png",
+      "rating": 5,
+      "price": 95,
+      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+      "sizes": ["8US","8.5US","9US","9.5","10US"],
+      "colors": [
+        {
+          "color": "Classic",
+          "images": [
+            "imagesOrder/SNEAKER/NewB 574.png"
+          ]
+        }  
+      ]
+    }
+  ]
+}

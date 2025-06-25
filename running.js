@@ -31,12 +31,13 @@ const navAuthLink = document.getElementById('nav-auth-link'); // Added for dynam
              }
 		window.onload=function() {
 			updateAuthLink(); // Update the nav link on page load
-		};
-document.addEventListener('DOMContentLoaded', function () {
-    const productContainer = document.getElementById('product-list-container');
+};
+    
+    document.addEventListener('DOMContentLoaded', function () {
+    const productContainer = document.getElementById('runProducts-list-container');
     let allProducts = [];
   
-    fetch('running.json')
+    fetch('http://localhost:5000/api/runsProducts')
       .then(res => res.json())
       .then(data => {
         allProducts = data.products;
