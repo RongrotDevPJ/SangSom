@@ -3,6 +3,7 @@
     {
       "name": "Nike Air Jordan 1 Mid",
       "image_url": "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago.png",
+      "brand": "Nike",
       "rating": 5,
       "price": 180,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -34,6 +35,7 @@
     {
       "name": "Nike Air Jordan 1 Low",
       "image_url": "imagesOrder/SNEAKER/Jordan L/Nike panda.png",
+      "brand": "Nike",
       "rating": 5,
       "price": 120,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -67,6 +69,7 @@
     {
       "name": "Adidas Samba OG",
       "image_url": "imagesOrder/SNEAKER/Samba/Adidas samba.png",
+      "brand": "Adidas",
       "rating": 5,
       "price": 105,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -98,6 +101,7 @@
     {
       "name": "Adidas Gazelle",
       "image_url": "imagesOrder/SNEAKER/Gazzelle/Gazelle Black.png",
+      "brand": "Adidas",
       "rating": 5,
       "price": 120,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -132,6 +136,7 @@
     {
       "name": "Puma Speedcat",
       "image_url": "imagesOrder/SNEAKER/Speedcat/Puma speedcat.png",
+      "brand": "Puma",
       "rating": 5,
       "price": 120,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -161,6 +166,7 @@
     {
       "name": "New Balance 530",
       "image_url": "imagesOrder/SNEAKER/NewB 530.png",
+      "brand": "New Balance",
       "rating": 5,
       "price": 95,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -177,6 +183,7 @@
     {
       "name": "New Balance 574",
       "image_url": "imagesOrder/SNEAKER/NewB 574.png",
+      "brand": "New Balance",
       "rating": 5,
       "price": 95,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",

@@ -1,5 +1,5 @@
 {
-  "products": [
+  "Adidasproducts": [
     {
       "name": "Adidas Samba OG",
       "image_url": "imagesOrder/SNEAKER/Samba/Adidas samba.png",
@@ -88,40 +88,6 @@
           "color": "Red",
           "images": [
             "imagesOrder/SNEAKER/Samba/Samba Red.png"
-          ]
-        }
-         
-      ]
-    },
-    {
-      "name": "Adidas Gazelle",
-      "image_url": "imagesOrder/SNEAKER/Gazzelle/Gazelle Black.png",
-      "rating": 5,
-      "price": 120,
-      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
-      "sizes": ["8US","8.5US","9US","9.5","10US"],
-      "colors": [
-        {
-          "color": "Black",
-          "images": [
-            "imagesOrder/SNEAKER/Gazzelle/Gazelle Black.png",
-            "imagesOrder/SNEAKER/Gazzelle/Gazelle Black Front.png",
-            "imagesOrder/SNEAKER/Gazzelle/Gazelle Black Top.png"
-          ]
-        },
-        {
-          "color": "Blue",
-          "images": [
-            "imagesOrder/SNEAKER/Gazzelle/Gazelle Blue.png",
-            "imagesOrder/SNEAKER/Gazzelle/Gazelle Blue Front.png"
-          ]
-        },
-        {
-          "color": "Red",
-          "images": [
-            "imagesOrder/SNEAKER/Gazzelle/Gazelle Red.png",
-            "imagesOrder/SNEAKER/Gazzelle/Gazelle Red Front.png",
-            "imagesOrder/SNEAKER/Gazzelle/Gazelle Red Top.png"
           ]
         }
          

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const productContainer = document.getElementById('product-list-container');
   let allProducts = [];
 
-  fetch('http://localhost:5000/api/products')
+  fetch('running.json')
     .then(res => res.json())
     .then(data => {
       allProducts = data.products;

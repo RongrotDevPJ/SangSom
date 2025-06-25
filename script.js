@@ -148,5 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
       $('#productModal').modal('hide');
     };
     
+
+    
     
 });

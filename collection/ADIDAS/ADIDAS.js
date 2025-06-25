@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       let slidesHTML = '';
 
-      data.products.forEach((product, index) => {
+      data.Adidasproducts.forEach((product, index) => {
         slidesHTML += `
           <div class="swiper-slide">
             <div class="best_shoes" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 20px;">

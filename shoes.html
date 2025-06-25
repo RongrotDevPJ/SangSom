@@ -65,7 +65,12 @@
                                 <a class="nav-item nav-link" href="racing boots.html">Sport</a>
                                 <!-- Login/Logout Link - Dynamically updated by JavaScript -->
                                 <a class="nav-item nav-link" href="login.html" id="nav-auth-link">Login</a> 
-                                <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png" alt="Search" /></a>
+								<a class="nav-item nav-link last" href="#" id="searchIcon">
+									<img src="images/search_icon.png" alt="Search" />
+								</a>
+								<input type="text" id="searchInput" class="form-control" placeholder="ค้นหาชื่อหรือแบรนด์..."
+									style="display: none; max-width: 300px; position: absolute; top: 70px; right: 100px; z-index: 9999;">
+								  
                                 <a class="nav-item nav-link last" href="cart.html"><img src="images/shop_icon.png" alt="Cart" /></a>
                                 <div class="nav-item dropdown" style="display: none;"> 
                                  <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -74,6 +79,9 @@
                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                  <a class="dropdown-item" href="login.html" id="loginLink">Login</a>
                                  <a class="dropdown-item" href="#" id="logoutLink" style="display: none;">Logout</a>
+								<input type="text" id="navbarSearchInput" class="form-control" placeholder="ค้นหารองเท้า..."
+									style="display: none; max-width: 300px; position: absolute; top: 70px; right: 100px; z-index: 9999;">
+
                                  </div>
                               </div>
                             </div>
