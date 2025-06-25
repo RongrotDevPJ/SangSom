@@ -190,6 +190,44 @@
         }
          
       ]
-    }
+    },
+    {
+        "name": "Nike ZoomX Vaporfly Next% 3",
+        "image_url": "imagesOrder/Running/Nike zoomx/Nike zoomx.png",
+        "rating": 5,
+        "price": 180,
+        "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+        "sizes": ["8US","8.5US","9US","9.5","10US"],
+        "colors": [
+          {
+            "color": "Prototype",
+            "images": [
+              "imagesOrder/Running/Nike zoomx/Nike zoomx.png",
+              "imagesOrder/Running/Nike zoomx/Nike zoomx side.png",
+              "imagesOrder/Running/Nike zoomx/Nike zoomx back.png",
+              "imagesOrder/Running/Nike zoomx/Nike zoomx sole.png"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nike Air Zoom Alphafly Next% 3",
+        "image_url": "imagesOrder/Running/Nike Alphafly/NikeAlpha.png",
+        "rating": 5,
+        "price": 120,
+        "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+        "sizes": ["8US","8.5US","9US","9.5","10US"],
+        "colors": [
+          {
+            "color": "Blueprint",
+            "images": [
+              "imagesOrder/Running/Nike Alphafly/NikeAlpha.png",
+              "imagesOrder/Running/Nike Alphafly/NikeAlphaside.png",
+              "imagesOrder/Running/Nike Alphafly/NikeAlphaback.png",
+              "imagesOrder/Running/Nike Alphafly/NikeAlphatop.png"
+            ]
+          }
+        ]
+      }
   ]
 }

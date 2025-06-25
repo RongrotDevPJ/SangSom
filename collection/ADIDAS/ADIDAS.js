@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const productContainer = document.getElementById('product-list-NikeH');
+  const productContainer = document.getElementById('product-list-ADIDAS');
   let allProducts = [];
 
-  fetch('collection/Nike/NikeH.json')
+  fetch('collection/ADIDAS/ADIDAS.json')
     .then(res => res.json())
     .then(data => {
       allProducts = data.products;
