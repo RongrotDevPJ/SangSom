@@ -17,6 +17,68 @@
           ]
         },
         {
+          "color": "Black",
+          "images": [
+            "imagesOrder/SNEAKER/Samba/Samba OG.png"
+          ]
+        },
+        {
+          "color": "Red",
+          "images": [
+            "imagesOrder/SNEAKER/Samba/Samba Red.png"
+          ]
+        }
+         
+      ]
+    },
+    {
+      "name": "Adidas Samba Black",
+      "image_url": "imagesOrder/SNEAKER/Samba/Samba OG.png",
+      "rating": 5,
+      "price": 105,
+      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+      "sizes": ["8US","8.5US","9US","9.5","10US"],
+      "colors": [
+        {
+          "color": "Black OG",
+          "images": [
+            "imagesOrder/SNEAKER/Samba/Samba OG.png"
+          ]
+        },
+        {
+          "color": "Cloud White Core Black",
+          "images": [
+            "imagesOrder/SNEAKER/Samba/Adidas samba.png",
+            "imagesOrder/SNEAKER/Samba/Adidas samba side.jpg",
+            "imagesOrder/SNEAKER/Samba/Adidas samba front.jpg"
+          ]
+        },
+        {
+          "color": "Red",
+          "images": [
+            "imagesOrder/SNEAKER/Samba/Samba Red.png"
+          ]
+        }
+         
+      ]
+    },
+    {
+      "name": "Adidas Samba OG",
+      "image_url": "imagesOrder/SNEAKER/Samba/Adidas samba.png",
+      "rating": 5,
+      "price": 105,
+      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+      "sizes": ["8US","8.5US","9US","9.5","10US"],
+      "colors": [
+        {
+          "color": "Cloud White Core Black",
+          "images": [
+            "imagesOrder/SNEAKER/Samba/Adidas samba.png",
+            "imagesOrder/SNEAKER/Samba/Adidas samba side.jpg",
+            "imagesOrder/SNEAKER/Samba/Adidas samba front.jpg"
+          ]
+        },
+        {
           "color": "Black OG",
           "images": [
             "imagesOrder/SNEAKER/Samba/Samba OG.png"

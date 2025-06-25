@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(res => res.json())
     .then(data => {
       allProducts = data.products;
-
       data.products.forEach((product, index) => {
+        
         const productCardHTML = `
           <div class="col-sm-4">
             <div class="best_shoes" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 20px;">
