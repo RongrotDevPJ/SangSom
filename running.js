@@ -1,3 +1,37 @@
+const navAuthLink = document.getElementById('nav-auth-link'); // Added for dynamic navbar link
+		function updateAuthLink() {
+                const loggedInUserEmail = localStorage.getItem('loggedInUserEmail');
+                if (navAuthLink) {
+                    if (loggedInUserEmail) {
+                        navAuthLink.textContent = 'Logout';
+                        navAuthLink.href = '#'; // Change to a hash link or just prevent default
+                        navAuthLink.removeEventListener('click', handleLoginClick); // Remove login click
+                        navAuthLink.addEventListener('click', handleLogoutClick); // Add logout click
+                    } else {
+                        navAuthLink.textContent = 'Login';
+                        navAuthLink.href = 'login.html';
+                        navAuthLink.removeEventListener('click', handleLogoutClick); // Remove logout click
+                        navAuthLink.addEventListener('click', handleLoginClick); // Add login click
+                    }
+                }
+             }
+
+             // Handle Login Click (redirect to login page)
+             function handleLoginClick(event) {
+                 // Default behavior is already login.html, so no special action needed here for now
+             }
+
+             // Handle Logout Click
+             function handleLogoutClick(event) {
+                 event.preventDefault(); // Prevent default link behavior
+                 localStorage.removeItem('loggedInUserEmail'); // Clear the logged-in user's email
+                 alert('You have been logged out.');
+                 updateAuthLink(); // Update the nav link immediately
+                 window.location.href = 'index.html'; // Redirect to home or login page
+             }
+		window.onload=function() {
+			updateAuthLink(); // Update the nav link on page load
+		};
 document.addEventListener('DOMContentLoaded', function () {
     const productContainer = document.getElementById('product-list-container');
     let allProducts = [];
@@ -117,11 +151,11 @@ document.addEventListener('DOMContentLoaded', function () {
       
       
   
-      window.addToCart = function(index) {
-        const product = allProducts[index];
-      
-        const selectedColorIndex = document.getElementById('color-select')?.value;
-        const selectedSize = document.getElementById('size-select')?.value;
+        window.addToCart = function(index) {
+          const product = allProducts[index];
+
+          const selectedColorIndex = document.getElementById('color-select')?.value;
+          const selectedSize = document.getElementById('size-select')?.value;
       
         // ตรวจสอบว่าผู้ใช้เลือก color และ size แล้ว
         if (selectedColorIndex === null || selectedColorIndex === '' || selectedSize === null || selectedSize === '') {

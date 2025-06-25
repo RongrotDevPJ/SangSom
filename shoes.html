@@ -58,17 +58,26 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link" href="index.html">Home</a>
-              <a class="nav-item nav-link" href="collection.html">Collection</a>
-              <a class="nav-item nav-link" href="shoes.html">Sneaker</a>
-			  <a class="nav-item nav-link" href="racing boots.html">Sport</a>
-              <a class="nav-item nav-link" href="contact.html">Contact</a>
-              <a class="nav-item nav-link" href="login.html">Login</a>
-              <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png" alt="Search" /></a>
-              <a class="nav-item nav-link last" href="cart.html"><img src="images/shop_icon.png" alt="Cart" /></a>
-            </div>
-          </div>
+                            <div class="navbar-nav">
+                                <a class="nav-item nav-link" href="index.html">Home</a>
+                                <a class="nav-item nav-link" href="collection.html">Collection</a>
+                                <a class="nav-item nav-link" href="shoes.html">Sneaker</a>
+                                <a class="nav-item nav-link" href="racing boots.html">Sport</a>
+                                <!-- Login/Logout Link - Dynamically updated by JavaScript -->
+                                <a class="nav-item nav-link" href="login.html" id="nav-auth-link">Login</a> 
+                                <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png" alt="Search" /></a>
+                                <a class="nav-item nav-link last" href="cart.html"><img src="images/shop_icon.png" alt="Cart" /></a>
+                                <div class="nav-item dropdown" style="display: none;"> 
+                                 <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 Account
+                                 </a>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                 <a class="dropdown-item" href="login.html" id="loginLink">Login</a>
+                                 <a class="dropdown-item" href="#" id="logoutLink" style="display: none;">Logout</a>
+                                 </div>
+                              </div>
+                            </div>
+                        </div>
         </nav>
       </div>
     </div>
@@ -203,7 +212,40 @@
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 	  	
       <script>
-		
+		const navAuthLink = document.getElementById('nav-auth-link'); // Added for dynamic navbar link
+		function updateAuthLink() {
+                const loggedInUserEmail = localStorage.getItem('loggedInUserEmail');
+                if (navAuthLink) {
+                    if (loggedInUserEmail) {
+                        navAuthLink.textContent = 'Logout';
+                        navAuthLink.href = '#'; // Change to a hash link or just prevent default
+                        navAuthLink.removeEventListener('click', handleLoginClick); // Remove login click
+                        navAuthLink.addEventListener('click', handleLogoutClick); // Add logout click
+                    } else {
+                        navAuthLink.textContent = 'Login';
+                        navAuthLink.href = 'login.html';
+                        navAuthLink.removeEventListener('click', handleLogoutClick); // Remove logout click
+                        navAuthLink.addEventListener('click', handleLoginClick); // Add login click
+                    }
+                }
+             }
+
+             // Handle Login Click (redirect to login page)
+             function handleLoginClick(event) {
+                 // Default behavior is already login.html, so no special action needed here for now
+             }
+
+             // Handle Logout Click
+             function handleLogoutClick(event) {
+                 event.preventDefault(); // Prevent default link behavior
+                 localStorage.removeItem('loggedInUserEmail'); // Clear the logged-in user's email
+                 alert('You have been logged out.');
+                 updateAuthLink(); // Update the nav link immediately
+                 window.location.href = 'index.html'; // Redirect to home or login page
+             }
+		window.onload=function() {
+			updateAuthLink(); // Update the nav link on page load
+		};
 		$(document).ready(function () {
 		  // Fancybox
 		  $(".fancybox").fancybox({

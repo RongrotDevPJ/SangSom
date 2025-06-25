@@ -58,17 +58,26 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link" href="index.html">Home</a>
-              <a class="nav-item nav-link" href="collection.html">Collection</a>
-              <a class="nav-item nav-link" href="shoes.html">Sneaker</a>
-              <a class="nav-item nav-link" href="racing boots.html">Sport</a>
-              <a class="nav-item nav-link" href="contact.html">Contact</a>
-              <a class="nav-item nav-link" href="login.html">Login</a>
-              <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png" alt="Search" /></a>
-              <a class="nav-item nav-link last" href="cart.html"><img src="images/shop_icon.png" alt="Cart" /></a>
-            </div>
-          </div>
+                            <div class="navbar-nav">
+                                <a class="nav-item nav-link" href="index.html">Home</a>
+                                <a class="nav-item nav-link" href="collection.html">Collection</a>
+                                <a class="nav-item nav-link" href="shoes.html">Sneaker</a>
+                                <a class="nav-item nav-link" href="racing boots.html">Sport</a>
+                                <!-- Login/Logout Link - Dynamically updated by JavaScript -->
+                                <a class="nav-item nav-link" href="login.html" id="nav-auth-link">Login</a> 
+                                <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png" alt="Search" /></a>
+                                <a class="nav-item nav-link last" href="cart.html"><img src="images/shop_icon.png" alt="Cart" /></a>
+                                <div class="nav-item dropdown" style="display: none;"> 
+                                 <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 Account
+                                 </a>
+                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                 <a class="dropdown-item" href="login.html" id="loginLink">Login</a>
+                                 <a class="dropdown-item" href="#" id="logoutLink" style="display: none;">Logout</a>
+                                 </div>
+                              </div>
+                            </div>
+                        </div>
         </nav>
       </div>
     </div>
@@ -205,6 +214,7 @@
       <script src="running.js"></script>
 
       <script>
+        
   $(document).ready(function () {
     // Fancybox
     $(".fancybox").fancybox({
