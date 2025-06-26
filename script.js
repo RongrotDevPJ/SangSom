@@ -121,33 +121,53 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addToCart = function(index) {
       const product = allProducts[index];
     
-      const selectedColorIndex = document.getElementById('color-select')?.value;
-      const selectedSize = document.getElementById('size-select')?.value;
+      // ตรวจสอบ dropdown ว่ามีหรือไม่
+      const colorSelect = document.getElementById('color-select');
+      const sizeSelect = document.getElementById('size-select');
     
-      // ตรวจสอบว่าผู้ใช้เลือก color และ size แล้ว
-      if (selectedColorIndex === null || selectedColorIndex === '' || selectedSize === null || selectedSize === '') {
-        alert("Select color or size");
+      if (!colorSelect || !sizeSelect) {
+        alert("Color or size selector not found");
+        return;
+      }
+    
+      const selectedColorIndex = colorSelect.value;
+      const selectedSize = sizeSelect.value;
+    
+      // ตรวจสอบว่าเลือกครบหรือยัง
+      if (selectedColorIndex === '' || selectedSize === '') {
+        alert("Please select both color and size.");
         return;
       }
     
       const selectedColor = product.colors[selectedColorIndex];
     
-      // สร้าง item พร้อมสี + ไซส์
+      // ตรวจสอบว่า selectedColor มีข้อมูลหรือไม่
+      if (!selectedColor) {
+        alert("Selected color not found.");
+        return;
+      }
+    
+      // สร้าง item ที่จะเพิ่มในตะกร้า
       const cartItem = {
         name: product.name,
         price: product.price,
         color: selectedColor.color,
         size: selectedSize,
-        image_url: selectedColor.images[0] // เอาภาพแรกของสีที่เลือก
+        image_url: selectedColor.images?.[0] || product.image_url
       };
     
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
-      cart.push(cartItem);
-      localStorage.setItem('cart', JSON.stringify(cart));
-    
-      alert("Add to cart Successful!");
-      $('#productModal').modal('hide');
+      try {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push(cartItem);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert("Add to cart successful!");
+        $('#productModal').modal('hide');
+      } catch (error) {
+        console.error("Failed to add to cart:", error);
+        alert("Failed to add to cart. Please try again.");
+      }
     };
+    
     
     document.getElementById('buyNowBtn').addEventListener('click', function () {
     // ไปหน้า shoes.html
