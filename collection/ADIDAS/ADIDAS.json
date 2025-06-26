@@ -109,7 +109,7 @@
     },
     {
         "name": "Adidas Adizero Adios Pro 3",
-        "image_url": "imagesOrder/Running/AdidasAdizero/Adizero.jpg",
+        "image_url": "imagesOrder/Running/AdidasAdizero/Adizero.png",
         "rating": 5,
         "price": 105,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -118,7 +118,7 @@
           {
             "color": "White Solar Red",
             "images": [
-                "imagesOrder/Running/AdidasAdizero/Adizero.jpg",
+                "imagesOrder/Running/AdidasAdizero/Adizero.png",
                 "imagesOrder/Running/AdidasAdizero/Adizeroside.jpg",
                 "imagesOrder/Running/AdidasAdizero/Adizerofront.jpg",
                 "imagesOrder/Running/AdidasAdizero/topAdizero.jpg",

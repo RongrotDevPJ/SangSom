@@ -54,7 +54,7 @@
     },
     {
         "name": "Puma ForeverRun Nitro 2",
-        "image_url": "imagesOrder/Running/Puma foreverrun/Puma foreverrun.jpg",
+        "image_url": "imagesOrder/Running/Puma foreverrun/Puma foreverrun.png",
         "rating": 4,
         "price": 120,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -63,14 +63,14 @@
           {
             "color": "Saysky Feather Grey",
             "images": [
-              "imagesOrder/Running/Puma foreverrun/Puma foreverrun.jpg"
+              "imagesOrder/Running/Puma foreverrun/Puma foreverrun.png"
             ]
           }
         ]
       },
       {
         "name": "Puma Fast-R Nitro Elite 3",
-        "image_url": "imagesOrder/Running/Puma FastR/Puma fastr.jpg",
+        "image_url": "imagesOrder/Running/Puma FastR/Puma fastr.png",
         "rating": 5,
         "price": 95,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -79,7 +79,7 @@
           {
             "color": "White Glowing Red Mint",
             "images": [
-              "imagesOrder/Running/Puma FastR/Puma fastr.jpg"
+              "imagesOrder/Running/Puma FastR/Puma fastr.png"
             ]
           }
         ]

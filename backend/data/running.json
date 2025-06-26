@@ -5,7 +5,7 @@
         "image_url": "imagesOrder/Running/Nike zoomx/Nike zoomx.png",
         "brand": "Nike",
         "rating": 5,
-        "price": 180,
+        "price": 250,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
         "sizes": ["8US","8.5US","9US","9.5","10US"],
         "colors": [
@@ -25,7 +25,7 @@
         "image_url": "imagesOrder/Running/Nike Alphafly/NikeAlpha.png",
         "brand": "Nike",
         "rating": 5,
-        "price": 120,
+        "price": 285,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
         "sizes": ["8US","8.5US","9US","9.5","10US"],
         "colors": [
@@ -42,17 +42,17 @@
       },
       {
         "name": "Adidas Adizero Adios Pro 3",
-        "image_url": "imagesOrder/Running/AdidasAdizero/Adizero.jpg",
+        "image_url": "imagesOrder/Running/AdidasAdizero/Adizero.png",
         "brand": "Adidas",
         "rating": 3,
-        "price": 105,
+        "price": 250,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
         "sizes": ["8US","8.5US","9US","9.5","10US"],
         "colors": [
           {
             "color": "White Solar Red",
             "images": [
-                "imagesOrder/Running/AdidasAdizero/Adizero.jpg",
+                "imagesOrder/Running/AdidasAdizero/Adizero.png",
                 "imagesOrder/Running/AdidasAdizero/Adizeroside.jpg",
                 "imagesOrder/Running/AdidasAdizero/Adizerofront.jpg",
                 "imagesOrder/Running/AdidasAdizero/topAdizero.jpg",
@@ -66,7 +66,7 @@
         "image_url": "imagesOrder/Running/Adidas Ultraboostlight/AdidasUltraboost.png",
         "brand": "Adidas",
         "rating": 3,
-        "price": 120,
+        "price": 190,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
         "sizes": ["8US","8.5US","9US","9.5","10US"],
         "colors": [
@@ -80,34 +80,34 @@
       },
       {
         "name": "Puma ForeverRun Nitro 2",
-        "image_url": "imagesOrder/Running/Puma foreverrun/Puma foreverrun.jpg",
+        "image_url": "imagesOrder/Running/Puma foreverrun/Puma foreverrun.png",
         "brand": "Puma",
         "rating": 4,
-        "price": 120,
+        "price": 150,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
         "sizes": ["8US","8.5US","9US","9.5","10US"],
         "colors": [
           {
             "color": "Saysky Feather Grey",
             "images": [
-              "imagesOrder/Running/Puma foreverrun/Puma foreverrun.jpg"
+              "imagesOrder/Running/Puma foreverrun/Puma foreverrun.png"
             ]
           }
         ]
       },
       {
         "name": "Puma Fast-R Nitro Elite 3",
-        "image_url": "imagesOrder/Running/Puma FastR/Puma fastr.jpg",
+        "image_url": "imagesOrder/Running/Puma FastR/Puma fastr.png",
         "brand": "Puma",
         "rating": 5,
-        "price": 95,
+        "price": 300,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
         "sizes": ["8US","8.5US","9US","9.5","10US"],
         "colors": [
           {
             "color": "White Glowing Red Mint",
             "images": [
-              "imagesOrder/Running/Puma FastR/Puma fastr.jpg"
+              "imagesOrder/Running/Puma FastR/Puma fastr.png"
             ]
           }
         ]

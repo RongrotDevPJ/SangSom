@@ -276,5 +276,6 @@ document.addEventListener('DOMContentLoaded', function () {
       console.error("Error loading product data:", error);
     });
 
+    
    
 });
