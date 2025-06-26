@@ -2,19 +2,38 @@
 <html lang="en">
 
 <head>
+    <!-- basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
     <title>Sangsom</title>
-    <link rel="icon" href="imagesOrder/LOGO/SANG_SOM.png">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!-- owl stylesheets -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+    <link rel="icon" href="imagesOrder/LOGO/SANG_SOM.png">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 
 <body class="main-layout">
@@ -144,7 +163,6 @@
                     });
             }
 
-       
 
         function renderProducts(products) {
             const container = document.getElementById('product-list-container');
@@ -159,19 +177,20 @@
                 const stars = '<li style="display:inline;"><img src="images/star-icon.png"></li>'.repeat(product.rating);
                 const html =
                     `<div class="col-sm-4 mb-4">
-      <div class="product-card p-3 border rounded">
-          <p><strong style="color: #333;">${product.name}</strong></p>
-          <img src="${product.image_url}" alt="${product.name}" class="img-fluid mb-2" />
-          <ul style="list-style:none; padding-left:0; margin-bottom: 0;">${stars}</ul>
-          <p>
-            <strong style="color: #333;">Price:</strong>
-            <span style="color:red;">$${product.price}</span>
-          </p>
-          <button class="btn btn-outline-primary" onclick="showProductDetail(${index})">View Detail</button>
-      </div>
-  </div>`;
+                    <div class="product-card p-3 border rounded">
+                    <p><strong style="color: #333;">${product.name}</strong></p>
+                    <img src="${product.image_url}" alt="${product.name}" class="img-fluid mb-2" />
+                    <ul style="list-style:none; padding-left:0; margin-bottom: 0;">${stars}</ul>
+                    <p>
+                    <strong style="color: #333;">Price:</strong>
+                    <span style="color:red;">$${product.price}</span>
+                    </p>
+                    <button class="btn btn-outline-primary" onclick="showProductDetail(${index})">View Detail</button>
+                    </div>
+                    </div>`;
 
                 container.innerHTML += html;
+
             });
         }
 
