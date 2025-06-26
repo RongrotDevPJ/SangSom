@@ -65,7 +65,7 @@
                                 <a class="nav-item nav-link" href="racing boots.html">Sport</a>
                                 <!-- Login/Logout Link - Dynamically updated by JavaScript -->
                                 <a class="nav-item nav-link" href="login.html" id="nav-auth-link">Login</a> 
-								<a class="nav-item nav-link last" href="#" id="searchIcon">
+								<a class="nav-item nav-link last" href="search.html">
 									<img src="images/search_icon.png" alt="Search" />
 								</a>
 								<input type="text" id="searchInput" class="form-control" placeholder="ค้นหาชื่อหรือแบรนด์..."
@@ -118,7 +118,7 @@
 			<div class="modal-dialog modal-lg" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title">Detail</h4>
+						<h4 class="modal-title">Product Detail</h4>
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
 					</div>
 					<div class="modal-body" id="modal-content"></div>
@@ -126,7 +126,7 @@
 			</div>
 			</div>
 	
-
+	</div>
    	<!-- New Arrivals section end -->
 	<!-- section footer start -->
     <div class="section_footer">
@@ -254,6 +254,7 @@
 		window.onload=function() {
 			updateAuthLink(); // Update the nav link on page load
 		};
+
 		$(document).ready(function () {
 		  // Fancybox
 		  $(".fancybox").fancybox({
