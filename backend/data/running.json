@@ -3,6 +3,7 @@
       {
         "name": "Nike ZoomX Vaporfly Next% 3",
         "image_url": "imagesOrder/Running/Nike zoomx/Nike zoomx.png",
+        "brand": "Nike",
         "rating": 5,
         "price": 180,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -22,6 +23,7 @@
       {
         "name": "Nike Air Zoom Alphafly Next% 3",
         "image_url": "imagesOrder/Running/Nike Alphafly/NikeAlpha.png",
+        "brand": "Nike",
         "rating": 5,
         "price": 120,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -39,9 +41,10 @@
         ]
       },
       {
-        "name": "Adizero Adios Pro 3",
+        "name": "Adidas Adizero Adios Pro 3",
         "image_url": "imagesOrder/Running/AdidasAdizero/Adizero.jpg",
-        "rating": 5,
+        "brand": "Adidas",
+        "rating": 3,
         "price": 105,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
         "sizes": ["8US","8.5US","9US","9.5","10US"],
@@ -61,7 +64,8 @@
       {
         "name": "Adidas UltraBoost Light ",
         "image_url": "imagesOrder/Running/Adidas Ultraboostlight/AdidasUltraboost.png",
-        "rating": 5,
+        "brand": "Adidas",
+        "rating": 3,
         "price": 120,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
         "sizes": ["8US","8.5US","9US","9.5","10US"],
@@ -77,7 +81,8 @@
       {
         "name": "Puma ForeverRun Nitro 2",
         "image_url": "imagesOrder/Running/Puma foreverrun/Puma foreverrun.jpg",
-        "rating": 5,
+        "brand": "Puma",
+        "rating": 4,
         "price": 120,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
         "sizes": ["8US","8.5US","9US","9.5","10US"],
@@ -93,6 +98,7 @@
       {
         "name": "Puma Fast-R Nitro Elite 3",
         "image_url": "imagesOrder/Running/Puma FastR/Puma fastr.jpg",
+        "brand": "Puma",
         "rating": 5,
         "price": 95,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",

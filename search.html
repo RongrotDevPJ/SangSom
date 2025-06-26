@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sangsom</title>
+    <link rel="icon" href="imagesOrder/LOGO/SANG_SOM.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+</head>
+
+<body class="main-layout">
+    <!-- Header -->
+    <div class="header_section header_main">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-3">
+                    <div class="logo">
+                        <a href="index.html"><img src="imagesOrder/LOGO/SANG_SOM.png" alt="Logo" /></a>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarNavAltMarkup">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-item nav-link" href="index.html">Home</a>
+                                <a class="nav-item nav-link" href="collection.html">Collection</a>
+                                <a class="nav-item nav-link" href="shoes.html">Sneaker</a>
+                                <a class="nav-item nav-link" href="racing boots.html">Sport</a>
+                                <a class="nav-item nav-link" href="login.html" id="nav-auth-link">Login</a>
+                                <a class="nav-item nav-link last" href="search.html">
+                                    <img src="images/search_icon.png" alt="Search" />
+                                </a>
+                                <input type="text" id="searchInput" class="form-control ml-2"
+                                    placeholder="Search here..." style="max-width: 300px;">
+                                <a class="nav-item nav-link last" href="cart.html">
+                                    <img src="images/shop_icon.png" alt="Cart" />
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Title -->
+    <div class="collection_section layout_padding text-center">
+        <div class="container">
+            <h1 class="new_text mb-4">Search Your Favorite Sneakers</h1>
+            <p class="consectetur_text mb-5">Find your perfect pair by name or brand.</p>
+        </div>
+    </div>
+
+    <!-- Product List -->
+    <div class="layout_padding gallery_section">
+        <div class="container">
+            <div class="row" id="product-list-container"></div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Product Detail</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" id="modal-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="section_footer">
+        <div class="container">
+            <!-- Footer content as-is -->
+        </div>
+    </div>
+    <div class="copyright">2025 SangSom Sneaker Shop.</div>
+
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript -->
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script>
+        const navAuthLink = document.getElementById('nav-auth-link');
+        function updateAuthLink() {
+            const loggedInUserEmail = localStorage.getItem('loggedInUserEmail');
+            if (navAuthLink) {
+                if (loggedInUserEmail) {
+                    navAuthLink.textContent = 'Logout';
+                    navAuthLink.href = '#';
+                    navAuthLink.onclick = handleLogoutClick;
+                } else {
+                    navAuthLink.textContent = 'Login';
+                    navAuthLink.href = 'login.html';
+                }
+            }
+        }
+        function handleLogoutClick(e) {
+            e.preventDefault();
+            localStorage.removeItem('loggedInUserEmail');
+            alert('You have been logged out.');
+            updateAuthLink();
+            window.location.href = 'index.html';
+        }
+        window.onload = function () {
+            updateAuthLink();
+            loadProducts();
+        };
+
+        let allProducts = [];
+
+        function loadProducts() {
+                fetch('http://localhost:5000/api/products')
+                    .then(res => res.json())
+                    .then(data => {
+                        allProducts = data.products;
+                        renderProducts(allProducts);
+                    });
+            }
+
+       
+
+        function renderProducts(products) {
+            const container = document.getElementById('product-list-container');
+            container.innerHTML = '';
+
+            if (products.length === 0) {
+                container.innerHTML = '<div class="col-12 text-center text-danger">No matching products found.</div>';
+                return;
+            }
+
+            products.forEach((product, index) => {
+                const stars = '<li style="display:inline;"><img src="images/star-icon.png"></li>'.repeat(product.rating);
+                const html =
+                    `<div class="col-sm-4 mb-4">
+      <div class="product-card p-3 border rounded">
+          <p><strong style="color: #333;">${product.name}</strong></p>
+          <img src="${product.image_url}" alt="${product.name}" class="img-fluid mb-2" />
+          <ul style="list-style:none; padding-left:0; margin-bottom: 0;">${stars}</ul>
+          <p>
+            <strong style="color: #333;">Price:</strong>
+            <span style="color:red;">$${product.price}</span>
+          </p>
+          <button class="btn btn-outline-primary" onclick="showProductDetail(${index})">View Detail</button>
+      </div>
+  </div>`;
+
+                container.innerHTML += html;
+            });
+        }
+
+        function showProductDetail(index) {
+            const product = allProducts[index];
+            const color = product.colors?.[0];
+            const image = color?.images?.[0] || product.image_url;
+
+            const modal = document.getElementById('modal-content');
+            modal.innerHTML = `
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="${image}" alt="${product.name}" class="img-fluid rounded" />
+                    </div>
+                    <div class="col-md-6">
+                        <h3>${product.name}</h3>
+                        <p><strong>Brand:</strong> ${product.brand}</p>
+                        <p><strong>Price:</strong> $${product.price}</p>
+                        <p><strong>Detail:</strong> ${product.detail}</p>
+                        <p><strong>Available Sizes:</strong> ${product.sizes.join(', ')}</p>
+                    </div>
+                </div>`;
+
+            $('#productModal').modal('show');
+        }
+
+        document.getElementById('searchInput').addEventListener('input', function () {
+            const query = this.value.toLowerCase();
+            const filtered = allProducts.filter(p =>
+                p.name.toLowerCase().includes(query) || p.brand.toLowerCase().includes(query)
+            );
+            renderProducts(filtered);
+        });
+    </script>
+</body>
+
+</html>

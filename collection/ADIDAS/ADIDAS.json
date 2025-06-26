@@ -1,5 +1,5 @@
 {
-  "Adidasproducts": [
+  "products": [
     {
       "name": "Adidas Samba OG",
       "image_url": "imagesOrder/SNEAKER/Samba/Adidas samba.png",
@@ -12,86 +12,137 @@
           "color": "Cloud White Core Black",
           "images": [
             "imagesOrder/SNEAKER/Samba/Adidas samba.png",
-            "imagesOrder/SNEAKER/Samba/Adidas samba side.jpg",
-            "imagesOrder/SNEAKER/Samba/Adidas samba front.jpg"
-          ]
-        },
-        {
-          "color": "Black",
-          "images": [
-            "imagesOrder/SNEAKER/Samba/Samba OG.png"
-          ]
-        },
-        {
-          "color": "Red",
-          "images": [
-            "imagesOrder/SNEAKER/Samba/Samba Red.png"
+            "imagesOrder/SNEAKER/Samba/Adidas samba Front.png",
+            "imagesOrder/SNEAKER/Samba/Adidas samba Top.png"
           ]
         }
-         
       ]
     },
     {
       "name": "Adidas Samba Black",
-      "image_url": "imagesOrder/SNEAKER/Samba/Samba OG.png",
+      "image_url": "imagesOrder/SNEAKER/Samba/Samba Black.png",
       "rating": 5,
       "price": 105,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
       "sizes": ["8US","8.5US","9US","9.5","10US"],
       "colors": [
         {
-          "color": "Black OG",
+          "color": "Black",
           "images": [
-            "imagesOrder/SNEAKER/Samba/Samba OG.png"
-          ]
-        },
-        {
-          "color": "Cloud White Core Black",
-          "images": [
-            "imagesOrder/SNEAKER/Samba/Adidas samba.png",
-            "imagesOrder/SNEAKER/Samba/Adidas samba side.jpg",
-            "imagesOrder/SNEAKER/Samba/Adidas samba front.jpg"
-          ]
-        },
-        {
-          "color": "Red",
-          "images": [
-            "imagesOrder/SNEAKER/Samba/Samba Red.png"
+            "imagesOrder/SNEAKER/Samba/Samba Black.png",
+            "imagesOrder/SNEAKER/Samba/Samba Black Front.png",
+            "imagesOrder/SNEAKER/Samba/Samba Black Top.png"
           ]
         }
-         
       ]
     },
     {
-      "name": "Adidas Samba OG",
-      "image_url": "imagesOrder/SNEAKER/Samba/Adidas samba.png",
+      "name": "Adidas Samba Burgundy",
+      "image_url": "imagesOrder/SNEAKER/Samba/Samba Burgundy.png",
       "rating": 5,
       "price": 105,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
       "sizes": ["8US","8.5US","9US","9.5","10US"],
       "colors": [
         {
-          "color": "Cloud White Core Black",
+          "color": "Burgundy",
           "images": [
-            "imagesOrder/SNEAKER/Samba/Adidas samba.png",
-            "imagesOrder/SNEAKER/Samba/Adidas samba side.jpg",
-            "imagesOrder/SNEAKER/Samba/Adidas samba front.jpg"
+            "imagesOrder/SNEAKER/Samba/Samba Burgundy.png",
+            "imagesOrder/SNEAKER/Samba/Samba Burgundy Front.png",
+            "imagesOrder/SNEAKER/Samba/Samba Burgundy Top.png"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "Adidas Gazelle Black",
+      "image_url": "imagesOrder/SNEAKER/Gazzelle/Gazelle Black.png",
+      "rating": 5,
+      "price": 105,
+      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+      "sizes": ["8US","8.5US","9US","9.5","10US"],
+      "colors": [
         {
-          "color": "Black OG",
+          "color": "Black",
           "images": [
-            "imagesOrder/SNEAKER/Samba/Samba OG.png"
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Black.png",
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Black Front.png",
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Black Top.png"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "Adidas Gazelle Blue",
+      "image_url": "imagesOrder/SNEAKER/Gazzelle/Gazelle Blue.png",
+      "rating": 5,
+      "price": 105,
+      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+      "sizes": ["8US","8.5US","9US","9.5","10US"],
+      "colors": [
+        {
+          "color": "Blue",
+          "images": [
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Blue.png",
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Blue Front.png"
+          ] 
+        }
+      ]
+    },
+    {
+      "name": "Adidas Gazelle Red",
+      "image_url": "imagesOrder/SNEAKER/Gazzelle/Gazelle Red.png",
+      "rating": 5,
+      "price": 105,
+      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+      "sizes": ["8US","8.5US","9US","9.5","10US"],
+      "colors": [
         {
           "color": "Red",
           "images": [
-            "imagesOrder/SNEAKER/Samba/Samba Red.png"
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Red.png",
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Red Front.png",
+            "imagesOrder/SNEAKER/Gazzelle/Gazelle Red Top.png"
           ]
         }
-         
       ]
-    }
+    },
+    {
+        "name": "Adidas Adizero Adios Pro 3",
+        "image_url": "imagesOrder/Running/AdidasAdizero/Adizero.jpg",
+        "rating": 5,
+        "price": 105,
+        "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+        "sizes": ["8US","8.5US","9US","9.5","10US"],
+        "colors": [
+          {
+            "color": "White Solar Red",
+            "images": [
+                "imagesOrder/Running/AdidasAdizero/Adizero.jpg",
+                "imagesOrder/Running/AdidasAdizero/Adizeroside.jpg",
+                "imagesOrder/Running/AdidasAdizero/Adizerofront.jpg",
+                "imagesOrder/Running/AdidasAdizero/topAdizero.jpg",
+                "imagesOrder/Running/AdidasAdizero/Adizerosole.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Adidas UltraBoost Light ",
+        "image_url": "imagesOrder/Running/Adidas Ultraboostlight/AdidasUltraboost.png",
+        "rating": 5,
+        "price": 120,
+        "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+        "sizes": ["8US","8.5US","9US","9.5","10US"],
+        "colors": [
+          {
+            "color": "Black White",
+            "images": [
+              "imagesOrder/Running/Adidas Ultraboostlight/AdidasUltraboost.png"
+            ]
+          }
+        ]
+      }
+    
   ]
 }

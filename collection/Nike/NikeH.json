@@ -1,39 +1,28 @@
 {
-  "Nikeproducts": [
+  "products": [
     {
-      "name": "Nike Air Jordan 1 Mid",
-      "image_url": "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago.png",
+      "name": "Nike Air Jordan 1 Mid Chicago",
+      "image_url": "imagesOrder/SNEAKER/Jordan H/jordan1 mid chicago.png",
+      "brand": "Nike",
       "rating": 5,
       "price": 180,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
       "sizes": ["8US","8.5US","9US","9.5","10US"],
       "colors": [
         {
-          "color": "Chicago",
+          "color": "Chicago Toe",
           "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago.png",
+            "imagesOrder/SNEAKER/Jordan H/jordan1 mid chicago.png",
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 mid chicago back.png",
             "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago Front.png"
           ]
-        },
-        {
-          "color": "Black",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black.png",
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black Front.png"
-          ]
-        },
-        {
-          "color": "Laker",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker.png"
-          ]
         }
-         
       ]
     },
     {
       "name": "Nike Air Jordan 1 Mid Black",
       "image_url": "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black.png",
+      "brand": "Nike",
       "rating": 5,
       "price": 180,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -45,26 +34,13 @@
             "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black.png",
             "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black Front.png"
           ]
-        },
-        {
-          "color": "Chicago",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago.png",
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago Front.png"
-          ]
-        },
-        {
-          "color": "Laker",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker.png"
-          ]
         }
-         
       ]
     },
     {
       "name": "Nike Air Jordan 1 Mid Laker",
       "image_url": "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker.png",
+      "brand": "Nike",
       "rating": 5,
       "price": 180,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -75,26 +51,12 @@
           "images": [
             "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker.png"
           ]
-        },
-        {
-          "color": "Chicago",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago.png",
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago Front.png"
-          ]
-        },
-        {
-          "color": "Black",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black.png",
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black Front.png"
-          ]
         }
-         
       ]
     },{
       "name": "Nike Air Jordan 1 Low Panda",
       "image_url": "imagesOrder/SNEAKER/Jordan L/Nike Panda.png",
+      "brand": "Nike",
       "rating": 5,
       "price": 130,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -106,61 +68,13 @@
             "imagesOrder/SNEAKER/Jordan L/Nike Panda.png",
             "imagesOrder/SNEAKER/Jordan L/Nike Panda Front.png"
           ]
-        },
-        {
-          "color": "Quai",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan L/Jordan L Quai.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L Front.png"
-          ]
-        },
-        {
-          "color": "UNC",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC Front.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC Behind.png"
-          ]
         }
-         
-      ]
-    },
-    {
-      "name": "Nike Air Jordan 1 Low Quai",
-      "image_url": "imagesOrder/SNEAKER/Jordan L/Jordan L Quai.png",
-      "rating": 5,
-      "price": 130,
-      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
-      "sizes": ["8US","8.5US","9US","9.5","10US"],
-      "colors": [
-        {
-          "color": "Quai",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan L/Jordan L Quai.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L Front.png"
-          ]
-        },
-        {
-          "color": "Panda",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan L/Nike Panda.png",
-            "imagesOrder/SNEAKER/Jordan L/Nike Panda Front.png"
-          ]
-        },
-        {
-          "color": "UNC",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC Front.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC Behind.png"
-          ]
-        }
-         
       ]
     },
     {
       "name": "Nike Air Jordan 1 Low UNC",
       "image_url": "imagesOrder/SNEAKER/Jordan L/Jordan L UNC.png",
+      "brand": "Nike",
       "rating": 5,
       "price": 130,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -173,27 +87,31 @@
             "imagesOrder/SNEAKER/Jordan L/Jordan L UNC Front.png",
             "imagesOrder/SNEAKER/Jordan L/Jordan L UNC Behind.png"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "Nike Air Jordan 1 Low Quai",
+      "image_url": "imagesOrder/SNEAKER/Jordan L/Jordan L Quai.png",
+      "brand": "Nike",
+      "rating": 5,
+      "price": 130,
+      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+      "sizes": ["8US","8.5US","9US","9.5","10US"],
+      "colors": [
         {
-          "color": "Panda",
+          "color": "Quai",
           "images": [
-            "imagesOrder/SNEAKER/Jordan L/Nike Panda.png",
-            "imagesOrder/SNEAKER/Jordan L/Nike Panda Front.png"
-          ]
-        },
-        {
-            "color": "Quai",
-            "images": [
             "imagesOrder/SNEAKER/Jordan L/Jordan L Quai.png",
             "imagesOrder/SNEAKER/Jordan L/Jordan L Front.png"
           ]
         }
-         
       ]
     },
     {
         "name": "Nike ZoomX Vaporfly Next% 3",
         "image_url": "imagesOrder/Running/Nike zoomx/Nike zoomx.png",
+        "brand": "Nike",
         "rating": 5,
         "price": 180,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -213,6 +131,7 @@
       {
         "name": "Nike Air Zoom Alphafly Next% 3",
         "image_url": "imagesOrder/Running/Nike Alphafly/NikeAlpha.png",
+        "brand": "Nike",
         "rating": 5,
         "price": 120,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",

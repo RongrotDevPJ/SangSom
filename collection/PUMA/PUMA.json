@@ -1,39 +1,26 @@
 {
   "products": [
     {
-      "name": "Nike Air Jordan 1 Mid",
-      "image_url": "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago.png",
+      "name": "Puma Speedcat Red",
+      "image_url": "imagesOrder/SNEAKER/Speedcat/Puma speedcat.png",
       "rating": 5,
       "price": 180,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
       "sizes": ["8US","8.5US","9US","9.5","10US"],
       "colors": [
         {
-          "color": "Chicago",
+          "color": "Red",
           "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago.png",
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago Front.png"
-          ]
-        },
-        {
-          "color": "Black",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black.png",
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black Front.png"
-          ]
-        },
-        {
-          "color": "Laker",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker.png"
+            "imagesOrder/SNEAKER/Speedcat/Puma speedcat.png",
+            "imagesOrder/SNEAKER/Speedcat/Puma speedcat Front.png",
+            "imagesOrder/SNEAKER/Speedcat/Puma speedcat Top.png"
           ]
         }
-         
       ]
     },
     {
-      "name": "Nike Air Jordan 1 Mid Black",
-      "image_url": "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black.png",
+      "name": "Puma Speedcat Black",
+      "image_url": "imagesOrder/SNEAKER/Speedcat/Speed Black.png",
       "rating": 5,
       "price": 180,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
@@ -42,154 +29,60 @@
         {
           "color": "Black",
           "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black.png",
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black Front.png"
-          ]
-        },
-        {
-          "color": "Chicago",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago.png",
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago Front.png"
-          ]
-        },
-        {
-          "color": "Laker",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker.png"
+            "imagesOrder/SNEAKER/Speedcat/Speed Black.png",
+            "imagesOrder/SNEAKER/Speedcat/Speed Black Front.png"
           ]
         }
-         
       ]
     },
     {
-      "name": "Nike Air Jordan 1 Mid Laker",
-      "image_url": "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker.png",
+      "name": "Puma Speedcat Blue",
+      "image_url": "imagesOrder/SNEAKER/Speedcat/Speed Blue.png",
       "rating": 5,
       "price": 180,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
       "sizes": ["8US","8.5US","9US","9.5","10US"],
       "colors": [
         {
-          "color": "Laker",
+          "color": "Blue",
           "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker.png"
-          ]
-        },
-        {
-          "color": "Chicago",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago.png",
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago Front.png"
-          ]
-        },
-        {
-          "color": "Black",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black.png",
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black Front.png"
+            "imagesOrder/SNEAKER/Speedcat/Speed Blue.png",
+            "imagesOrder/SNEAKER/Speedcat/Speed Blue Top.png"
           ]
         }
-         
-      ]
-    },{
-      "name": "Nike Air Jordan 1 Low Panda",
-      "image_url": "imagesOrder/SNEAKER/Jordan L/Nike Panda.png",
-      "rating": 5,
-      "price": 130,
-      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
-      "sizes": ["8US","8.5US","9US","9.5","10US"],
-      "colors": [
-        {
-          "color": "Panda",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan L/Nike Panda.png",
-            "imagesOrder/SNEAKER/Jordan L/Nike Panda Front.png"
-          ]
-        },
-        {
-          "color": "Quai",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan L/Jordan L Quai.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L Front.png"
-          ]
-        },
-        {
-          "color": "UNC",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC Front.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC Behind.png"
-          ]
-        }
-         
       ]
     },
     {
-      "name": "Nike Air Jordan 1 Low Quai",
-      "image_url": "imagesOrder/SNEAKER/Jordan L/Jordan L Quai.png",
-      "rating": 5,
-      "price": 130,
-      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
-      "sizes": ["8US","8.5US","9US","9.5","10US"],
-      "colors": [
-        {
-          "color": "Quai",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan L/Jordan L Quai.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L Front.png"
-          ]
-        },
-        {
-          "color": "Panda",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan L/Nike Panda.png",
-            "imagesOrder/SNEAKER/Jordan L/Nike Panda Front.png"
-          ]
-        },
-        {
-          "color": "UNC",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC Front.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC Behind.png"
-          ]
-        }
-         
-      ]
-    },
-    {
-      "name": "Nike Air Jordan 1 Low UNC",
-      "image_url": "imagesOrder/SNEAKER/Jordan L/Jordan L UNC.png",
-      "rating": 5,
-      "price": 130,
-      "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
-      "sizes": ["8US","8.5US","9US","9.5","10US"],
-      "colors": [
-        {
-            "color": "UNC",
+        "name": "Puma ForeverRun Nitro 2",
+        "image_url": "imagesOrder/Running/Puma foreverrun/Puma foreverrun.jpg",
+        "rating": 4,
+        "price": 120,
+        "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+        "sizes": ["8US","8.5US","9US","9.5","10US"],
+        "colors": [
+          {
+            "color": "Saysky Feather Grey",
             "images": [
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC Front.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L UNC Behind.png"
-          ]
-        },
-        {
-          "color": "Panda",
-          "images": [
-            "imagesOrder/SNEAKER/Jordan L/Nike Panda.png",
-            "imagesOrder/SNEAKER/Jordan L/Nike Panda Front.png"
-          ]
-        },
-        {
-            "color": "Quai",
+              "imagesOrder/Running/Puma foreverrun/Puma foreverrun.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Puma Fast-R Nitro Elite 3",
+        "image_url": "imagesOrder/Running/Puma FastR/Puma fastr.jpg",
+        "rating": 5,
+        "price": 95,
+        "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
+        "sizes": ["8US","8.5US","9US","9.5","10US"],
+        "colors": [
+          {
+            "color": "White Glowing Red Mint",
             "images": [
-            "imagesOrder/SNEAKER/Jordan L/Jordan L Quai.png",
-            "imagesOrder/SNEAKER/Jordan L/Jordan L Front.png"
-          ]
-        }
-         
-      ]
-    }
+              "imagesOrder/Running/Puma FastR/Puma fastr.jpg"
+            ]
+          }
+        ]
+      }
   ]
 }

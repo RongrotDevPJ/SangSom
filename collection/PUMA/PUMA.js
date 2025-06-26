@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const productContainer = document.getElementById('product-list-NikeH');
+  const productContainer = document.getElementById('product-list-PUMA');
   let allProducts = [];
 
-  fetch('collection/Nike/NikeH.json')
+  fetch('collection/PUMA/PUMA.json')
     .then(res => res.json())
     .then(data => {
       allProducts = data.products;
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
       data.products.forEach((product, index) => {
         slidesHTML += `
           <div class="swiper-slide">
-            <div class="best_shoes" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 20px;">
+            <div class="best_shoes" style="solid #ddd; padding: 15px; margin-bottom: 20px;">
               <p class="best_text"><strong>${product.name}</strong></p>
               <div class="shoes_icon">
                 <img src="${product.image_url}" alt="${product.name}" class="img-responsive" style="width:100%;">
@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
                   </ul>
                 </div>
                 <div class="right_part">
-                  <div class="shoes_price">Price: $<span style="color: #ff4e5b;">${product.price}</span></div>
+                  <div class="shoes_price">Price : <span style="color: #ff4e5b;">$${product.price}</span></div>
                 </div>
               </div>
               <div class="text-center mt-2">
-                <button class="btn btn-success" onclick="showProductDetail(${index})">View Detail</button>
+                <button class="btn btn-success view-detail-btn" data-index="${index}">View Detail</button>
               </div>
             </div>
           </div>
@@ -37,7 +37,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
       productContainer.innerHTML = slidesHTML;
 
-      // Init Swiper AFTER products are loaded
+      productContainer.addEventListener('click', function (e) {
+        const btn = e.target.closest('.view-detail-btn');
+        if (btn) {
+          const index = parseInt(btn.getAttribute('data-index'));
+          showPumaDetail(index);
+        }
+      });
+
       new Swiper('.mySwiper', {
         slidesPerView: 3,
         spaceBetween: 20,
@@ -45,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
+        simulateTouch: false,
+        preventClicks: true,
+        preventClicksPropagation: true,
         breakpoints: {
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
@@ -53,11 +63,10 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 
-  window.showProductDetail = function (index) {
+  window.showPumaDetail = function (index) {
     const product = allProducts[index];
     const modalBody = document.getElementById('modal-content');
 
-    // Generate dropdowns
     let colorOptions = '';
     product.colors.forEach((c, i) => {
       colorOptions += `<option value="${i}">${c.color}</option>`;
@@ -72,29 +81,33 @@ document.addEventListener('DOMContentLoaded', function () {
     const galleryHTML = generateThumbnailGallery(selectedColor.images);
 
     modalBody.innerHTML = `
-      <div class="row">
-        <div class="col-sm-6 image-gallery">
-          ${galleryHTML}
-        </div>
-        <div class="col-sm-6">
-          <h3>${product.name}</h3>
-          <p><strong>Price:</strong> $${product.price}</p>
-          <div class="form-group">
-            <label>Color:</label>
-            <select class="form-control" id="color-select">${colorOptions}</select>
+        <div class="row">
+          <div class="col-sm-6 image-gallery">
+            ${galleryHTML}
           </div>
-          <div class="form-group">
-            <label>Size:</label>
-            <select class="form-control" id="size-select">${sizeOptions}</select>
+          <div class="col-sm-6">
+            <p class="text-product">${product.name}</p>
+            <p class="text-black"Price:</p>
+            <p class="text-red">$${product.price}</p>
+            <div class="form-group">
+              <label class="text-black">Color:</label>
+              <select class="form-control" id="color-select">
+                ${colorOptions}
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="text-black">Size:</label>
+              <select class="form-control" id="size-select">
+                ${sizeOptions}
+              </select>
+            </div>
+            <button class="btn btn-success mt-2" onclick="addToCart(${index})">Add To Cart</button>
           </div>
-          <button class="btn btn-success mt-2" onclick="addToCart(${index})">Add to cart</button>
         </div>
-      </div>
-    `;
+      `;
 
-    // Update gallery on color change
     setTimeout(() => {
-      document.getElementById('color-select').addEventListener('change', (e) => {
+      document.getElementById('color-select')?.addEventListener('change', (e) => {
         const colorIndex = parseInt(e.target.value);
         const newImages = product.colors[colorIndex].images;
         document.querySelector('.image-gallery').innerHTML = generateThumbnailGallery(newImages);
@@ -120,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
   };
 
-  window.addToCart = function (index) {
+  window.addPumaToCart = function (index) {
     const product = allProducts[index];
     const colorIndex = document.getElementById('color-select')?.value;
     const size = document.getElementById('size-select')?.value;

@@ -12,6 +12,9 @@ const productsFilePath = path.join(__dirname, '..', 'data', 'product.json');
 // กำหนด Path ไปยังไฟล์ running.json ของคุณ
 const runProductsFilePath = path.join(__dirname, '..', 'data', 'running.json');
 
+// กำหนด Path ไปยังไฟล์ search.json ของคุณ
+const searchProductsFilePath = path.join(__dirname, '..', 'data', 'search.json');
+
 // Path to your temporary upload directory
 const tempUploadDir = path.join(__dirname, '..', 'temp_uploads');
 const finalUploadDir = path.join(__dirname, '..', 'uploads'); // Define final upload directory
@@ -82,33 +85,61 @@ router.get('/running', (req, res) => {
     }
 })
 
+// --- Helper Functions สำหรับอ่าน/เขียนไฟล์ JSON ---
+const readsearchProductsFile = () => {
+    try {
+        const data = fs.readFileSync(searchProductsFilePath, 'utf8');
+        return JSON.parse(data);
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            return []; // ถ้าไฟล์ไม่มี ให้คืนค่าเป็น Array ว่าง
+        }
+        throw error;
+    }
+};
+
+router.get('/search', (req, res) => {
+    try {
+        // *** สำคัญ: อ่านไฟล์ JSON จากดิสก์ใหม่ทุกครั้งที่มี GET Request ***
+        const products = readsearchProductsFile();
+        res.json(products);
+    } catch (e) {
+        res.status(400).json({ status: "Error Don't have file"});
+    }
+})
+
 router.post('/add', upload.array('img', 5), (req,res) => {
     const products = readProductsFile();
     const running = readrunProductsFile();
+    const search = readsearchProductsFile();
     const response = productService.addProduct(req, res);
 })
 
 router.post('/edit', upload.array('img', 5), (req,res) => {
     const products = readProductsFile();
     const running = readrunProductsFile();
+    const search = readsearchProductsFile();
     const response = productService.editProduct(req, res);
 })
 
 router.post('/remove', (req,res) => {
     const products = readProductsFile();
     const running = readrunProductsFile();
+    const search = readsearchProductsFile();
     const response = productService.removeProduct(req, res);
 })
 
 router.post('/sizeAdd', (req,res) => {
     const products = readProductsFile();
     const running = readrunProductsFile();
+    const search = readsearchProductsFile();
     const response = productService.sizeAdd(req, res);
 })
 
 router.post('/sizeRemove', (req,res) => {
     const products = readProductsFile();
     const running = readrunProductsFile();
+    const search = readsearchProductsFile();
     const response = productService.sizeRemove(req, res);
 })
 

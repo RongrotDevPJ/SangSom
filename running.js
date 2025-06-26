@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   </ul>
                 </div>
                 <div class="right_part">
-                  <div class="shoes_price">Price: $<span style="color: #ff4e5b;">${product.price}</span></div>
+                  <div class="shoes_price">Price : <span style="color: #ff4e5b;">$${product.price}</span></div>
                 </div>
               </div>
               <div class="text-center" style="margin-top: 10px;">
@@ -81,8 +81,9 @@ document.addEventListener('DOMContentLoaded', function () {
             ${galleryHTML}
           </div>
           <div class="col-sm-6">
-            <h3>${product.name}</h3>
-            <p class="text-black"><strong>Price:</strong> $${product.price}</p>
+            <p class="text-product">${product.name}</p>
+            <p class="text-black"Price:</p>
+            <p class="text-red">$${product.price}</p>
             <div class="form-group">
               <label class="text-black">Color:</label>
               <select class="form-control" id="color-select">
@@ -95,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 ${sizeOptions}
               </select>
             </div>
-            <button class="btn btn-success mt-2" onclick="addToCart(${index})">Add to cart</button>
+            <button class="btn btn-success mt-2" onclick="addToCart(${index})">Add To Cart</button>
           </div>
         </div>
       `;

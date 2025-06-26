@@ -21,13 +21,16 @@
           "color": "Black",
           "images": [
             "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black.png",
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black Front.png"
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black Front.png",
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black back.png",
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black sole.png"
           ]
         },
         {
           "color": "Laker",
           "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker.png"
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker.png",
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker front.png"
           ]
         }
          
@@ -109,7 +112,7 @@
       "name": "Adidas Gazelle",
       "image_url": "imagesOrder/SNEAKER/Gazzelle/Gazelle Black.png",
       "brand": "Adidas",
-      "rating": 5,
+      "rating": 4,
       "price": 120,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
       "sizes": ["8US","8.5US","9US","9.5","10US"],
@@ -144,7 +147,7 @@
       "name": "Puma Speedcat",
       "image_url": "imagesOrder/SNEAKER/Speedcat/Puma speedcat.png",
       "brand": "Puma",
-      "rating": 5,
+      "rating": 4,
       "price": 120,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
       "sizes": ["8US","8.5US","9US","9.5","10US"],
@@ -197,7 +200,7 @@
       "name": "New Balance 574",
       "image_url": "imagesOrder/SNEAKER/NeeB 574/NewB 574.png",
       "brand": "New Balance",
-      "rating": 5,
+      "rating": 3,
       "price": 95,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
       "sizes": ["8US","8.5US","9US","9.5","10US"],

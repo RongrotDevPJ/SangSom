@@ -67,7 +67,8 @@
                                 <a class="nav-item nav-link" href="racing boots.html">Sport</a>
                                 <!-- Login/Logout Link - Dynamically updated by JavaScript -->
                                 <a class="nav-item nav-link" href="login.html" id="nav-auth-link">Login</a> 
-                                <a class="nav-item nav-link last" href="#"><img src="images/search_icon.png" alt="Search" /></a>
+                                <a class="nav-item nav-link last" href="search.html">
+                                  <img src="images/search_icon.png" alt="Search" /></a>                                
                                 <a class="nav-item nav-link last" href="cart.html"><img src="images/shop_icon.png" alt="Cart" /></a>
                                 <div class="nav-item dropdown" style="display: none;"> 
                                  <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -105,24 +106,42 @@
     
     
       <div class="container">
+
+        <!--------NIKE-------->
         <h2 class="new_text">NIKE</h2>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper" id="product-list-NikeH">
-            <!-- JS จะ generate slide เข้าไปในนี้ -->
           </div>
-    
           <!-- ปุ่มเลื่อน -->
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div>
         
-
+        <!--------ADIDAS-------->
         <h2 class="new_text">ADIDAS</h2>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper" id="product-list-ADIDAS">
-            <!-- JS จะ generate slide เข้าไปในนี้ -->
           </div>
-    
+          <!-- ปุ่มเลื่อน -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+
+        <!--------PUMA-------->
+        <h2 class="new_text">PUMA</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper" id="product-list-PUMA">
+          </div>
+          <!-- ปุ่มเลื่อน -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-------New Balance-------->
+        <h2 class="new_text">NEW BALANCE</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper" id="product-list-NEWB">
+          </div>
           <!-- ปุ่มเลื่อน -->
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
@@ -133,20 +152,19 @@
       </div>
 
     <!-- MODAL POPUP -->
-
     <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Detail</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Detail</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-content"></div>
           </div>
-          <div class="modal-body" id="modal-content"></div>
         </div>
-      </div>
+        </div>
     </div>
 
-    
 
 
     <!-- New Arrivals section end -->
@@ -237,8 +255,10 @@
   <script src="js/plugin.js"></script>
 
   <!--Collection-->
-  <script src="collection/Nike/NikeH.js"></script>
+  <script src="/collection/Nike/NikeH.js"></script>
   <script src="collection/ADIDAS/ADIDAS.js"></script>
+  <script src="collection/PUMA/PUMA.js"></script>
+  <script src="collection/NEWB/NEWB.js"></script>
 
   <!-- sidebar -->
   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
