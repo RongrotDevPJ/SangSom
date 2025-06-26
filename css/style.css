@@ -1017,6 +1017,7 @@ a:hover {
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: 20px;
+  color: black;
 }
 
 
@@ -1116,4 +1117,16 @@ a:hover {
   flex: 0 0 50%;
   max-width: 100%;
   justify-items: center;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-red {
+  color: red;
+}
+
+.cart-section {
+  margin-bottom: 30px;
 }

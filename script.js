@@ -82,15 +82,15 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
           <div class="col-sm-6">
             <h3>${product.name}</h3>
-            <p><strong>Price:</strong> $${product.price}</p>
+            <p class="text-black"><strong>Price:</strong> $${product.price}</p>
             <div class="form-group">
-              <label>Color:</label>
+              <label class="text-black">Color:</label>
               <select class="form-control" id="color-select">
                 ${colorOptions}
               </select>
             </div>
             <div class="form-group">
-              <label>Size:</label>
+              <label class="text-black">Size:</label>
               <select class="form-control" id="size-select">
                 ${sizeOptions}
               </select>
@@ -148,7 +148,112 @@ document.addEventListener('DOMContentLoaded', function () {
       $('#productModal').modal('hide');
     };
     
+    document.getElementById('buyNowBtn').addEventListener('click', function () {
+    // ไปหน้า shoes.html
+    window.location.href = 'shoes.html';
+    });
+  
+    document.getElementById('seeMoreBtn').addEventListener('click', function () {
+      // ไปหน้า shoes.html
+      window.location.href = 'shoes.html';
+      });
 
-    
-    
+  // โหลดข้อมูล Air Jordan 1 mid หน้า index
+  fetch('http://localhost:5000/api/products')
+    .then(response => response.json())
+    .then(data => {
+      const products = data.products;
+
+      // หาผลิตภัณฑ์ที่ชื่อ "Nike Air Jordan 1 Mid"
+      const product = products.find(p => p.name === "Nike Air Jordan 1 Mid");
+
+      if (product) {
+        // สมมุติว่าใช้ภาพแรกของสี Chicago Toe
+        const imageSrc = product.colors.find(c => c.color === "Chicago Toe")?.images[2] || product.image_url;
+
+        // ตั้งค่า src ให้ <img>
+        const bannerImage = document.getElementById('bannerImage');
+        if (bannerImage) {
+          bannerImage.src = imageSrc;
+          bannerImage.alt = product.name;
+        }
+      } else {
+        console.warn("Product not found!");
+      }
+    })
+    .catch(error => {
+      console.error("Error loading product data:", error);
+    });
+  
+    // โหลดข้อมูล Puma หน้า index
+    fetch('http://localhost:5000/api/products')
+    .then(response => response.json())
+    .then(data => {
+    const product = data.products.find(p => p.name === "Puma Speedcat");
+
+    if (product) {
+      const redColor = product.colors.find(c => c.color === "Red");
+      const blueColor = product.colors.find(c => c.color === "Blue");
+
+      const redStars = document.getElementById('speedcatRedStars');
+      const blueStars = document.getElementById('speedcatBlueStars');
+
+      // สร้างดาวตาม rating
+      const createStars = (element, rating) => {
+        element.innerHTML = ''; // เคลียร์ของเดิม
+        for (let i = 0; i < rating; i++) {
+          const li = document.createElement('li');
+          const img = document.createElement('img');
+          img.src = 'images/star-icon.png';
+          li.appendChild(img);
+          element.appendChild(li);
+        }
+      };
+
+      if (redColor) {
+        document.getElementById('speedcatRedImg').src = redColor.images[0];
+        document.getElementById('speedcatRedName').textContent = "Speedcat Red";
+        document.getElementById('speedcatRedPrice').textContent = product.price;
+        createStars(redStars, product.rating);
+      }
+
+      if (blueColor) {
+        document.getElementById('speedcatBlueImg').src = blueColor.images[0];
+        document.getElementById('speedcatBlueName').textContent = "Speedcat Blue";
+        document.getElementById('speedcatBluePrice').textContent = product.price;
+        createStars(blueStars, product.rating);
+      }
+    }
+  })
+  .catch(error => {
+    console.error("Error loading product data:", error);
+  });
+
+  // โหลดข้อมูล Adidas Gazelle หน้า index
+    fetch('http://localhost:5000/api/products')
+    .then(response => response.json())
+    .then(data => {
+      const product = data.products.find(p => p.name === "Adidas Gazelle");
+
+      if (product) {
+        const blueColor = product.colors.find(c => c.color === "Blue");
+
+        if (blueColor) {
+          // รูปภาพ
+          document.getElementById('gazelleImage').src = blueColor.images[1] || blueColor.images[0];
+
+          // ข้อมูลข้อความ
+          document.getElementById('gazelleBrand').textContent = product.brand;
+          document.getElementById('gazelleName').textContent = product.name;
+          document.getElementById('gazellePrice').textContent = product.price;
+        }
+      } else {
+        console.warn("Adidas Gazelle not found in product.json");
+      }
+    })
+    .catch(error => {
+      console.error("Error loading product data:", error);
+    });
+
+   
 });

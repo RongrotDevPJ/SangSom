@@ -82,15 +82,15 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
           <div class="col-sm-6">
             <h3>${product.name}</h3>
-            <p><strong>Price:</strong> $${product.price}</p>
+            <p class="text-black"><strong>Price:</strong> $${product.price}</p>
             <div class="form-group">
-              <label>Color:</label>
+              <label class="text-black">Color:</label>
               <select class="form-control" id="color-select">
                 ${colorOptions}
               </select>
             </div>
             <div class="form-group">
-              <label>Size:</label>
+              <label class="text-black">Size:</label>
               <select class="form-control" id="size-select">
                 ${sizeOptions}
               </select>

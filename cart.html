@@ -84,11 +84,14 @@
 	<!-- New Arrivals section start -->
 	<div class="collection_text">Cart</div>
 	<div class="collection_section layout_padding">
-		<div class="container mt-5">
+		<div class="container mt-5 cart-section">
 			<h2 class="mb-4">🛒 <strong>My Cart</strong></h2>
-			<div id="cart-container"></div>
-			<div id="total-price" class="cart-total mb-3"></div>
+			<div id="cart-container">
+				
+			</div>
+			
 			<div class="text-right">
+				<div id="total-price" class="cart-total mb-3"></div>
 				<button id="checkout-btn" class="btn btn-primary">Checkout</button>
 			</div>
 		</div>
@@ -182,7 +185,7 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					Are you sure you want to complete your purchase?
+					<div class="text-black">you sure you want to complete your purchase?</div> 
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -206,7 +209,7 @@
 				</div>
 				<div class="modal-body">
 					<p class="lead">Your purchase was successful.<br>We hope to see you again soon!</p>
-					<img src="imagesOrder/thankyou.png" alt="Thank you" class="img-fluid" style="max-height: 200px;">
+					<img src="images/thanks.png" alt="Thank you" class="img-fluid" style="max-height: 200px;">
 				</div>
 				<div class="modal-footer justify-content-center border-0">
 					<a href="index.html" class="btn btn-success">Back to Home</a>
