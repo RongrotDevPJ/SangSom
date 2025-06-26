@@ -2,7 +2,7 @@
   "products": [
     {
       "name": "Nike Air Jordan 1 Mid",
-      "image_url": "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago.png",
+      "image_url": "imagesOrder/SNEAKER/Jordan H/jordan1 mid chicago.png",
       "brand": "Nike",
       "rating": 5,
       "price": 180,
@@ -10,9 +10,10 @@
       "sizes": ["8US","8.5US","9US","9.5","10US"],
       "colors": [
         {
-          "color": "Chicago",
+          "color": "Chicago Toe",
           "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago.png",
+            "imagesOrder/SNEAKER/Jordan H/jordan1 mid chicago.png",
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 mid chicago back.png",
             "imagesOrder/SNEAKER/Jordan H/Jordan1 H Chicago Front.png"
           ]
         },
@@ -45,7 +46,9 @@
           "color": "Panda",
           "images": [
             "imagesOrder/SNEAKER/Jordan L/Nike panda.png",
-            "imagesOrder/SNEAKER/Jordan L/Nike panda Front.png"
+            "imagesOrder/SNEAKER/Jordan L/dunk low panda front.png",
+            "imagesOrder/SNEAKER/Jordan L/dunk low panda back.png",
+            "imagesOrder/SNEAKER/Jordan L/dunk low panda top.png"
           ]
         },
         {
@@ -79,20 +82,24 @@
           "color": "Cloud White Core Black",
           "images": [
             "imagesOrder/SNEAKER/Samba/Adidas samba.png",
-            "imagesOrder/SNEAKER/Samba/Adidas samba side.jpg",
-            "imagesOrder/SNEAKER/Samba/Adidas samba front.jpg"
+            "imagesOrder/SNEAKER/Samba/Adidas samba Front.png",
+            "imagesOrder/SNEAKER/Samba/Adidas samba Top.png"
           ]
         },
         {
           "color": "Black OG",
           "images": [
-            "imagesOrder/SNEAKER/Samba/Samba OG.png"
+            "imagesOrder/SNEAKER/Samba/Samba Black.png",
+            "imagesOrder/SNEAKER/Samba/Samba Black Front.png",
+            "imagesOrder/SNEAKER/Samba/Samba Black Top.png"
           ]
         },
         {
-          "color": "Red",
+          "color": "Burgundy",
           "images": [
-            "imagesOrder/SNEAKER/Samba/Samba Red.png"
+            "imagesOrder/SNEAKER/Samba/Samba Burgundy.png",
+            "imagesOrder/SNEAKER/Samba/Samba Burgundy Front.png",
+            "imagesOrder/SNEAKER/Samba/Samba Burgundy Top.png"
           ]
         }
          
@@ -145,19 +152,23 @@
         {
           "color": "Red",
           "images": [
-            "imagesOrder/SNEAKER/Speedcat/Puma speedcat.png"
+            "imagesOrder/SNEAKER/Speedcat/Puma speedcat.png",
+            "imagesOrder/SNEAKER/Speedcat/Puma speedcat Front.png",
+            "imagesOrder/SNEAKER/Speedcat/Puma speedcat Top.png"
           ]
         },
         {
           "color": "Black",
           "images": [
-            "imagesOrder/SNEAKER/Speedcat/Speed Black.png"
+            "imagesOrder/SNEAKER/Speedcat/Speed Black.png",
+            "imagesOrder/SNEAKER/Speedcat/Speed Black Front.png"
           ]
         },
         {
           "color": "Blue",
           "images": [
-            "imagesOrder/SNEAKER/Speedcat/Speed Blue.png"
+            "imagesOrder/SNEAKER/Speedcat/Speed Blue.png",
+            "imagesOrder/SNEAKER/Speedcat/Speed Blue Top.png"
           ]
         }
          
@@ -175,14 +186,16 @@
         {
           "color": "Classic",
           "images": [
-            "imagesOrder/SNEAKER/NewB 530.png"
+            "imagesOrder/SNEAKER/NewB 530.png",
+            "imagesOrder/SNEAKER/NewB 530 Front.png",
+            "imagesOrder/SNEAKER/NewB 530 Top.png"
           ]
         }
       ]
     },
     {
       "name": "New Balance 574",
-      "image_url": "imagesOrder/SNEAKER/NewB 574.png",
+      "image_url": "imagesOrder/SNEAKER/NeeB 574/NewB 574.png",
       "brand": "New Balance",
       "rating": 5,
       "price": 95,
@@ -192,9 +205,27 @@
         {
           "color": "Classic",
           "images": [
-            "imagesOrder/SNEAKER/NewB 574.png"
+            "imagesOrder/SNEAKER/NeeB 574/NewB 574.png",
+            "imagesOrder/SNEAKER/NeeB 574/NewB 574 Front.png",
+            "imagesOrder/SNEAKER/NeeB 574/NewB 574 Top.png"
           ]
-        }  
+        },
+        {
+          "color": "Black",
+          "images": [
+            "imagesOrder/SNEAKER/NeeB 574/NewB 574 Black.png",
+            "imagesOrder/SNEAKER/NeeB 574/NewB 574 Black Front.png",
+            "imagesOrder/SNEAKER/NeeB 574/NewB 574 Black Top.png"
+          ]
+        },
+        {
+          "color": "Red",
+          "images": [
+            "imagesOrder/SNEAKER/NeeB 574/NewB 574 Red.png",
+            "imagesOrder/SNEAKER/NeeB 574/NewB 574 Red Front.png",
+            "imagesOrder/SNEAKER/NeeB 574/NewB 574 Red Top.png"
+          ]
+        }
       ]
     }
   ]
