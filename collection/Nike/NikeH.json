@@ -32,7 +32,9 @@
           "color": "Black",
           "images": [
             "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black.png",
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black Front.png"
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black Front.png",
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black back.png",
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Black sole.png"
           ]
         }
       ]
@@ -49,24 +51,27 @@
         {
           "color": "Laker",
           "images": [
-            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker.png"
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker.png",
+            "imagesOrder/SNEAKER/Jordan H/Jordan1 H Laker front.png"
           ]
         }
       ]
     },{
       "name": "Nike Air Jordan 1 Low Panda",
-      "image_url": "imagesOrder/SNEAKER/Jordan L/Nike Panda.png",
+      "image_url": "imagesOrder/SNEAKER/Jordan L/Nike panda.png",
       "brand": "Nike",
       "rating": 5,
-      "price": 130,
+      "price": 120,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
       "sizes": ["8US","8.5US","9US","9.5","10US"],
       "colors": [
         {
           "color": "Panda",
           "images": [
-            "imagesOrder/SNEAKER/Jordan L/Nike Panda.png",
-            "imagesOrder/SNEAKER/Jordan L/Nike Panda Front.png"
+            "imagesOrder/SNEAKER/Jordan L/Nike panda.png",
+            "imagesOrder/SNEAKER/Jordan L/dunk low panda front.png",
+            "imagesOrder/SNEAKER/Jordan L/dunk low panda back.png",
+            "imagesOrder/SNEAKER/Jordan L/dunk low panda top.png"
           ]
         }
       ]
@@ -76,7 +81,7 @@
       "image_url": "imagesOrder/SNEAKER/Jordan L/Jordan L UNC.png",
       "brand": "Nike",
       "rating": 5,
-      "price": 130,
+      "price": 120,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
       "sizes": ["8US","8.5US","9US","9.5","10US"],
       "colors": [
@@ -95,7 +100,7 @@
       "image_url": "imagesOrder/SNEAKER/Jordan L/Jordan L Quai.png",
       "brand": "Nike",
       "rating": 5,
-      "price": 130,
+      "price": 120,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
       "sizes": ["8US","8.5US","9US","9.5","10US"],
       "colors": [
@@ -113,7 +118,7 @@
         "image_url": "imagesOrder/Running/Nike zoomx/Nike zoomx.png",
         "brand": "Nike",
         "rating": 5,
-        "price": 180,
+        "price": 250,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
         "sizes": ["8US","8.5US","9US","9.5","10US"],
         "colors": [
@@ -133,7 +138,7 @@
         "image_url": "imagesOrder/Running/Nike Alphafly/NikeAlpha.png",
         "brand": "Nike",
         "rating": 5,
-        "price": 120,
+        "price": 285,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
         "sizes": ["8US","8.5US","9US","9.5","10US"],
         "colors": [

@@ -58,7 +58,7 @@
       "name": "Adidas Gazelle Black",
       "image_url": "imagesOrder/SNEAKER/Gazzelle/Gazelle Black.png",
       "rating": 5,
-      "price": 105,
+      "price": 120,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
       "sizes": ["8US","8.5US","9US","9.5","10US"],
       "colors": [
@@ -76,7 +76,7 @@
       "name": "Adidas Gazelle Blue",
       "image_url": "imagesOrder/SNEAKER/Gazzelle/Gazelle Blue.png",
       "rating": 5,
-      "price": 105,
+      "price": 120,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
       "sizes": ["8US","8.5US","9US","9.5","10US"],
       "colors": [
@@ -93,7 +93,7 @@
       "name": "Adidas Gazelle Red",
       "image_url": "imagesOrder/SNEAKER/Gazzelle/Gazelle Red.png",
       "rating": 5,
-      "price": 105,
+      "price": 120,
       "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
       "sizes": ["8US","8.5US","9US","9.5","10US"],
       "colors": [
@@ -111,7 +111,7 @@
         "name": "Adidas Adizero Adios Pro 3",
         "image_url": "imagesOrder/Running/AdidasAdizero/Adizero.png",
         "rating": 5,
-        "price": 105,
+        "price": 250,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
         "sizes": ["8US","8.5US","9US","9.5","10US"],
         "colors": [
@@ -131,7 +131,7 @@
         "name": "Adidas UltraBoost Light ",
         "image_url": "imagesOrder/Running/Adidas Ultraboostlight/AdidasUltraboost.png",
         "rating": 5,
-        "price": 120,
+        "price": 190,
         "detail": "รองเท้าบาสรุ่นยอดนิยม สีสันคลาสสิก ใส่ได้ทุกโอกาส",
         "sizes": ["8US","8.5US","9US","9.5","10US"],
         "colors": [
